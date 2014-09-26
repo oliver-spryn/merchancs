@@ -4,10 +4,12 @@
 */
 
 * {
-	font-family: 'Open Sans', sans-serif !important;
+	font-family: 'Open Sans', sans-serif;
+	outline: none;
 }
 
 html, body {
+	background-color: #EDEDED;
 	height: 100%;
 	width: 100%;
 }
@@ -17,10 +19,160 @@ h1, h2 {
 }
 
 /**
- * Global styles
+ * Themes:
+ *  - Apple   : #F26767
+ *  - Electric: #0CE3F7
+ *  - Lime    : #36FFD1
+ *  - Oak     : #BA9E76
  * ------------------------------
 */
 
-header#main-header nav {
-	
+body.apple .background-inherit {
+	background-color: #F26767;
+	transition: all .25s ease-in-out;
+}
+
+body.apple .text-inherit {
+	color: #F26767;
+	transition: all .25s ease-in-out;
+}
+
+.apple-instance {
+	background-color: #F26767;
+	color: #F26767;
+}
+
+body.electric .background-inherit {
+	background-color: #0CE3F7;
+	transition: all .25s ease-in-out;
+}
+
+body.electric .text-inherit {
+	color: #0CE3F7;
+	transition: all .25s ease-in-out;
+}
+
+.electric-instance {
+	background-color: #0CE3F7;
+	color: #0CE3F7;
+}
+
+body.lime .background-inherit {
+	background-color: #36FFD1;
+	transition: all .25s ease-in-out;
+}
+
+body.lime .text-inherit {
+	color: #36FFD1;
+	transition: all .25s ease-in-out;
+}
+
+.lime-instance {
+	background-color: #36FFD1;
+	color: #36FFD1;
+}
+
+body.oak .background-inherit {
+	background-color: #BA9E76;
+	transition: all .25s ease-in-out;
+}
+
+body.oak .text-inherit {
+	color: #BA9E76;
+	transition: all .25s ease-in-out;
+}
+
+.oak-instance {
+	background-color: #BA9E76;
+	color: #BA9E76;
+}
+
+/**
+ * Header styles
+ * ------------------------------
+*/
+
+header#main-header {
+	background: #282B2D;
+	height: 130px;
+	padding: 0px 5%;
+}
+
+header#main-header nav.navbar {
+	background: transparent;
+	border: none;
+    border-radius: 0px;
+    box-shadow: none;
+	height: 120px;
+	margin: 0px;
+	padding: 0px;
+}
+
+header#main-header nav.navbar a img.logo {
+	border: 2px solid #FFF;
+	margin-top: 15px
+}
+
+header#main-header nav.navbar ul.nav li a {
+	color: #FFFFFF;
+}
+
+header#main-header nav.navbar ul.nav li.open.themes a {
+	background-color: #666666;
+}
+
+header#main-header nav.navbar ul.nav li.themes a span.demo-disk {
+	border-radius: 100%;
+	display: inline-block;
+	height: 12px;
+	width: 12px;
+}
+
+header#main-header nav.navbar ul.nav li.themes ul {
+	background-color: #666666;
+	border: none;
+	border-radius: 0px;
+}
+
+header#main-header nav.navbar ul.nav li.themes ul li a {
+	border-left: 3px solid #666666;
+}
+
+header#main-header nav.navbar ul.nav li.themes ul li a:hover {
+	background: #888888;
+	border-left: 3px solid #CCCCCC;
+}
+
+header#main-header nav.navbar ul.nav li.themes ul li a.active {
+	border-left: 3px solid #FFFFFF;
+}
+
+header#main-header nav.navbar ul.nav li.themes ul li a.active:hover {
+	border-left: 3px solid #FFFFFF;
+}
+
+header#main-header nav.navbar ul.nav li.themes ul li a span.demo-disk {
+	margin-right: 10px;
+}
+
+header#main-header div.search {
+	margin: 57px 0px 0px 230px;
+	width: 600px
+}
+
+header#main-header div.search input {
+	background-color: transparent;
+	border: 1px solid #FFF;
+	border-radius: 0px;
+	color: #FFF;
+	height: 45px;
+	padding: 15px;
+}
+
+header#main-header div.search span.input-group-btn button {
+	background: transparent;
+	border: 1px solid #FFF;
+	border-radius: 0px;
+	color: #FFF;
+	height: 45px;
 }
