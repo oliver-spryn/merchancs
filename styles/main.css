@@ -96,6 +96,7 @@ header#main-header {
 	background: #282B2D;
 	height: 130px;
 	padding: 0px 5%;
+	margin-bottom: 70px;
 }
 
 header#main-header nav.navbar {
@@ -175,4 +176,19 @@ header#main-header div.search span.input-group-btn button {
 	border-radius: 0px;
 	color: #FFF;
 	height: 45px;
+}
+
+/**
+ * Content styles
+ * ------------------------------
+*/
+
+.thumbnail
+{
+	height: 80px;
+	width: 80px;
+}
+
+.sidebar {
+	left: -50px;
 }
