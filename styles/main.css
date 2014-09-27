@@ -120,6 +120,7 @@ header#main-header {
 	top: 0px;
 	transition: all .25s ease-in-out;
 	width: 100%;
+	margin-bottom: 70px;
 }
 
 header#main-header nav.navbar {
@@ -335,4 +336,19 @@ aside#categories ul li a {
 
 aside#categories ul li a:hover {
 	background-color: rgba(255, 255, 255, 0.2);
+}
+
+/**
+ * Content styles
+ * ------------------------------
+*/
+
+.thumbnail
+{
+	height: 80px;
+	width: 80px;
+}
+
+.sidebar {
+	left: -50px;
 }
