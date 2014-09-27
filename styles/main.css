@@ -32,6 +32,11 @@ body.apple .background-inherit {
 	transition: all .25s ease-in-out;
 }
 
+body.apple .border-inherit {
+	border-color: #F26767;
+	transition: all .25s ease-in-out;
+}
+
 body.apple .text-inherit {
 	color: #F26767;
 	transition: all .25s ease-in-out;
@@ -44,6 +49,11 @@ body.apple .text-inherit {
 
 body.electric .background-inherit {
 	background-color: #0CE3F7;
+	transition: all .25s ease-in-out;
+}
+
+body.electric .border-inherit {
+	border-color: #0CE3F7;
 	transition: all .25s ease-in-out;
 }
 
@@ -62,6 +72,11 @@ body.lime .background-inherit {
 	transition: all .25s ease-in-out;
 }
 
+body.lime .border-inherit {
+	border-color: #36FFD1;
+	transition: all .25s ease-in-out;
+}
+
 body.lime .text-inherit {
 	color: #36FFD1;
 	transition: all .25s ease-in-out;
@@ -74,6 +89,11 @@ body.lime .text-inherit {
 
 body.oak .background-inherit {
 	background-color: #BA9E76;
+	transition: all .25s ease-in-out;
+}
+
+body.oak .border-inherit {
+	border-color: #BA9E76;
 	transition: all .25s ease-in-out;
 }
 
@@ -95,7 +115,11 @@ body.oak .text-inherit {
 header#main-header {
 	background: #282B2D;
 	height: 130px;
-	padding: 0px 5%;
+	padding: 0px 67px;
+	position: fixed;
+	top: 0px;
+	transition: all .25s ease-in-out;
+	width: 100%;
 }
 
 header#main-header nav.navbar {
@@ -110,7 +134,19 @@ header#main-header nav.navbar {
 
 header#main-header nav.navbar a img.logo {
 	border: 2px solid #FFF;
-	margin-top: 15px
+	margin-top: 15px;
+	position: relative;
+	transition: all .25s ease-in-out;
+	width: 150px;
+	z-index: 150;
+}
+
+header#main-header nav.navbar ul.nav li:not(.open) {
+	transition: all .25s ease-in-out;
+}
+
+header#main-header nav.navbar ul.nav li:not(.open):hover {
+	opacity: 0.8;
 }
 
 header#main-header nav.navbar ul.nav li a {
@@ -157,7 +193,8 @@ header#main-header nav.navbar ul.nav li.themes ul li a span.demo-disk {
 
 header#main-header div.search {
 	margin: 57px 0px 0px 230px;
-	width: 600px
+	transition: all .25s ease-in-out;
+	width: 600px;
 }
 
 header#main-header div.search input {
@@ -175,4 +212,127 @@ header#main-header div.search span.input-group-btn button {
 	border-radius: 0px;
 	color: #FFF;
 	height: 45px;
+}
+
+header#main-header ul.personal {
+	display: inline-block;
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+	position: absolute;
+	right: 7px;
+	top: 67px;
+	transition: all .25s ease-in-out;
+}
+
+header#main-header ul.personal li {
+	display: inline;
+	padding: 0px 10px;
+}
+
+header#main-header ul.personal li a {
+	color: #FFFFFF;
+}
+
+header#main-header ul.personal li.cart a i.fa {
+	font-size: 24px;
+	margin-left: -10px;
+}
+
+header#main-header ul.personal li.cart a i.fa span.badge {
+	margin: -10px 0px 0px -10px;
+	position: fixed;
+	z-index: 10;
+}
+
+/**
+ * Header minimized styles
+ * ------------------------------
+*/
+
+header.minimized#main-header {
+	height: 60px;
+}
+
+header.minimized#main-header nav.navbar a img {
+	margin: 0px;
+	width: 80px;
+}
+
+header.minimized#main-header nav.navbar ul.nav {
+	display: none;
+}
+
+header.minimized#main-header div.search {
+	margin: 13px 0px 0px 150px;
+}
+
+header.minimized#main-header div.search input {
+	height: 35px;
+	padding: 7px;
+}
+
+header.minimized#main-header div.search span.input-group-btn button {
+	height: 35px;
+}
+
+header.minimized#main-header ul.personal {
+	top: 16px;
+}
+
+/**
+ * Categories styles
+ * ------------------------------
+*/
+
+aside#categories {
+	background: #282B2D;
+	bottom: 0px;
+	box-shadow: none;
+	height: 100%;
+	left: -315px;
+	position: fixed;
+	top: 0px;
+	transition: all .25s ease-in-out;
+	width: 315px;
+	z-index: 90;
+}
+
+body.open aside#categories {
+	box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.2);
+	left: 0px;
+}
+
+aside#categories > h2 {
+	border-bottom: 2px dotted #AAA;
+	color: #FFF;
+	font-size: 24px;
+	font-weight: 300;
+	padding-bottom: 20px;
+	margin: 200px 20px 0px 20px;
+	text-align: center;
+}
+
+aside#categories nav > h2 {
+	color: #FFF;
+	font-size: 16px;
+	margin-top: 27px;
+	text-align: center;
+}
+
+aside#categories ul {
+	list-style: none;
+	padding: 0px;
+	margin: 30px 0px 0px 0px;
+	text-align: center;
+}
+
+aside#categories ul li a {
+	display: block;
+	padding: 10px 20px;
+	text-decoration: none;
+}
+
+aside#categories ul li a:hover {
+	background-color: rgba(255, 255, 255, 0.2);
 }
