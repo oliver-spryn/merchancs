@@ -1,0 +1,13 @@
+#page-content-wrapper {
+	margin-top: 250px;
+}
+
+.product-image-container {
+	float: left;
+}
+.product-info-container {
+	clear: right;
+}
+.review-container{
+	clear: both;
+}
