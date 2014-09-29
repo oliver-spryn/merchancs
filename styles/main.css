@@ -452,12 +452,15 @@ footer#main-footer ul.profiles {
 
 footer#main-footer ul.profiles li {
 	display: inline-block;
+	margin-bottom: 10px;
+	margin-top: 0px;
 	padding: 10px;
 	transition: all .25s ease-in-out;
 	vertical-align: top;
 }
 
 footer#main-footer ul.profiles li:hover {
+	margin-bottom: 0px;
 	margin-top: 10px;
 }
 
