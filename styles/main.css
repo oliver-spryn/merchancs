@@ -14,6 +14,10 @@ html, body {
 	width: 100%;
 }
 
+body {
+	padding-top: 190px;
+}
+
 h1, h2 {
 	font-family: 'Julius Sans One', sans-serif;
 }
@@ -121,6 +125,7 @@ header#main-header {
 	transition: all .25s ease-in-out;
 	width: 100%;
 	margin-bottom: 70px;
+	z-index: 1000;
 }
 
 header#main-header nav.navbar {
@@ -169,6 +174,7 @@ header#main-header nav.navbar ul.nav li.themes ul {
 	background-color: #666666;
 	border: none;
 	border-radius: 0px;
+	z-index: 2000;
 }
 
 header#main-header nav.navbar ul.nav li.themes ul li a {
@@ -224,15 +230,79 @@ header#main-header ul.personal {
 	right: 7px;
 	top: 67px;
 	transition: all .25s ease-in-out;
+	z-index: 1000;
 }
 
-header#main-header ul.personal li {
+header#main-header ul.personal > li {
 	display: inline;
 	padding: 0px 10px;
 }
 
 header#main-header ul.personal li a {
 	color: #FFFFFF;
+}
+
+header#main-header ul.personal li.account a {
+	padding: 10px
+}
+
+header#main-header ul.personal li.account.open a {
+	background-color: #666666;
+}
+
+header#main-header ul.personal li.account ul {
+	background-color: #666666;
+	border: none;
+	border-radius: 0px;
+	margin-right: 14px;
+	position: absolute;
+	z-index: 1000;
+}
+
+header#main-header ul.personal li.account ul li span {
+	border-left: 3px solid #666666;
+	color: #FFF;
+	display: block;
+	padding: 10px;
+	position:  relative;
+	width: 300px;
+}
+
+header#main-header ul.personal li.account ul li span h2 {
+	border: 3px solid #FFFFFF;
+	display: table-cell;
+	font-size: 48px;
+	height: 96px;
+	text-align: center;
+	vertical-align: middle;
+	width: 96px;
+}
+
+header#main-header ul.personal li.account ul li span h3 {
+	display: inline-block;
+	font-size: 18px;
+	left: 105px;
+	padding-left: 15px;
+	position: absolute;
+	top: -10px;
+}
+
+header#main-header ul.personal li.account ul li span p {
+	display: inline-block;
+	font-size: 14px;
+	left: 105px;
+	padding-left: 15px;
+	position: absolute;
+	top: 33px;
+}
+
+header#main-header ul.personal li.account ul li span a {
+	background: #FFFFFF;
+	border-radius: 0px;
+	left: 118px;
+	padding: 6px 10px;
+	position: absolute;
+	top: 72px;
 }
 
 header#main-header ul.personal li.cart a i.fa {
@@ -351,4 +421,76 @@ aside#categories ul li a:hover {
 
 .sidebar {
 	left: -50px;
+}
+
+/**
+ * Footer styles
+ * ------------------------------
+*/
+
+footer#main-footer{
+	padding: 0px 67px;
+	width: 100%;
+}
+
+footer#main-footer section.divider {
+	border-top: 1px solid #282B2D;
+	margin-top: 80px;
+	text-align: center;
+}
+
+footer#main-footer section.divider img {
+	margin-top: -50px;
+}
+
+footer#main-footer ul.profiles {
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+	text-align: center;
+}
+
+footer#main-footer ul.profiles li {
+	display: inline-block;
+	padding: 10px;
+	transition: all .25s ease-in-out;
+	vertical-align: top;
+}
+
+footer#main-footer ul.profiles li:hover {
+	margin-top: 10px;
+}
+
+footer#main-footer ul.profiles li span {
+	border: 3px solid #282B2D;
+	border-radius: 100%;
+	display: block;
+	height: 75px;
+	overflow: hidden;
+	width: 75px;
+}
+
+footer#main-footer ul.profiles li img {
+	max-width: 69px;
+}
+
+footer#main-footer footer.mega-footer ul {
+	font-size: 12px;
+	list-style: none;
+	margin: 30px 0px 0px 0px;
+	padding: 0px;
+	width: 100%;
+}
+
+footer#main-footer footer.mega-footer ul li {
+	display: inline-block;
+}
+
+footer#main-footer footer.mega-footer ul li:first-child {
+	text-align: left;
+}
+
+footer#main-footer footer.mega-footer ul li:last-child {
+	float: right;
+	text-align: right;
 }
