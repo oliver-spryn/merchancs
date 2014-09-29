@@ -1,0 +1,25 @@
+.subtotal-div {
+	float: right;
+}
+.subtotal-div h3 {
+	font-size: 1.4em;
+}
+ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+ul li {
+	list-style-type: none;
+}
+.quantity-box {
+	width: 60px;
+}
+
+.cart-info {
+	width: 400px;
+}
+
+.cart-info li {
+	width: 300px;
+}
