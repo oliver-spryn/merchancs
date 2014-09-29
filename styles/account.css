@@ -1,0 +1,19 @@
+.account-list {
+	width: 80%;
+	padding: 0;
+	margin: 0;
+}
+.account-list li {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	height: 30px;
+}
+
+.payment, .address {
+	height: 70px !important;
+}
+input {
+	float: right;
+	
+}
