@@ -4,11 +4,12 @@
 <meta charset="UTF-8">
 <title>MerchanCS Template</title>
 
-<link href="https://fonts.googleapis.com/css?family=Lato:100,300,400|Open+Sans:400,300|Julius+Sans+One" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lato:100,300,400%7COpen+Sans:400,300%7CJulius+Sans+One" rel="stylesheet">
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" rel="stylesheet">
 <link href="styles/main.css" rel="stylesheet">
+<link href="styles/details.css" rel="stylesheet">
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
@@ -18,11 +19,11 @@
 <body class="electric">
 <header id="main-header">
 <nav class="navbar navbar-default" role="navigation">
-<a class="navbar-brand" href="#"><img alt="MerchanCS Logo" class="logo" src="images/logo.jpg"></a>
+<a class="navbar-brand" href="index.html"><img alt="MerchanCS Logo" class="logo" src="images/logo.jpg"></a>
 
 <ul class="nav navbar-nav navbar-right">
-<li><a class="home" href="#"><i class="fa fa-home text-inherit"></i> Home</a></li>
-<li><a class="search" href="#"><i class="fa fa-search text-inherit"></i> Search</a></li>
+<li><a class="home" href="index.html"><i class="fa fa-home text-inherit"></i> Home</a></li>
+<li><a class="search" href="search.html"><i class="fa fa-search text-inherit"></i> Search</a></li>
 <li><a class="browse" href="#"><i class="fa fa-bars text-inherit"></i> Browse</a></li>
 
 <li class="dropdown themes">
@@ -49,17 +50,17 @@
 
 <ul class="dropdown-menu dropdown-menu-right" role="menu">
 <li>
-<span data-class="apple" href="#">
+<div>
 <h2 class="background-inherit">W</h2>
 <h3>Walter J. Evancost</h3>
 <p>cdboatright@gcc.edu</p>
 <a href="#" class="btn btn-default" role="button">Sign Out</a>
-</span>
+</div>
 </li>
 </ul>
 </li>
 
-<li class="cart"><a href="#"><i class="fa fa-shopping-cart"><span class="background-inherit badge pull-right">1</span></i></a></li>
+<li class="cart"><a href="cart.html"><i class="fa fa-shopping-cart"><span class="background-inherit badge pull-right">1</span></i></a></li>
 </ul>
 </nav>
 </header>
@@ -91,26 +92,26 @@
 		<div class="row">
 		<div class="col-sm-3"> </div>
 		<div class="col-sm-9">
-				<h2>Specialty Items</br><small>A collection of our professors' greatest treasures</small></h2>
+				<h2>Specialty Items<br/><small>A collection of our professors' greatest treasures</small></h2>
 				<div class="container-fluid">
 					<div class="row">
 						<div class="col-sm-3">
-							<a href="#"><img class="img-responsive thumbnail" src="images/CoryBoatright.jpg"></a>
-							<h6>Autographed Photos </br><small>From $0.89</small></h6>
+							<a href="#"><img alt="Boatright" class="img-responsive thumbnail" src="images/CoryBoatright.jpg"/></a>
+							<h6>Autographed Photos <br/><small>From $0.89</small></h6>
 						</div>
 						<div class="col-sm-3">
-							<a href="#"><img class="img-responsive thumbnail" src="images/dictionary.jpg"></a>
-							<h6>Dr. B's Favorite Words (Uncensored) </br><small>Out of Stock</small></h6>
+							<a href="#"><img alt="Book" class="img-responsive thumbnail" src="images/dictionary.jpg"/></a>
+							<h6>Dr. B's Favorite Words (Uncensored) <br/><small>Out of Stock</small></h6>
 						</div>
 						<div class="col-sm-3">
-							<a href="#"><img class="img-responsive thumbnail" src="images/newton.jpg"></a>
-							<h6>Dr. B's Apple Newton </br><small>$999.95</small></h6>
+							<a href="#"><img alt="Newton" class="img-responsive thumbnail" src="images/newton.jpg"/></a>
+							<h6>Dr. B's Apple Newton <br/><small>$999.95</small></h6>
 						</div>
 					</div>
 					<div class="row">
 						<div class="col-sm-3">
-							<a href="#"><img class="img-responsive thumbnail" src="images/calvin-and-hobbes.jpg"></a>
-							<h6>Dr. Yeager's comic collection</br><small>$3999.95</small></h6>
+							<a href="#"><img alt="Book" class="img-responsive thumbnail" src="images/calvin-and-hobbes.jpg"/></a>
+							<h6>Dr. Yeager's comic collection<br/><small>$3999.95</small></h6>
 						</div>
 					</div>
 				</div>
@@ -132,12 +133,12 @@
 <li><span><img alt="Lory Al Moakar" src="https://my.gcc.edu/icsfileservershare/icsphotos/465641.jpg"/></span></li>
 </ul>
 
-<footer class="mega-footer">
+<section class="mega-footer">
 <ul>
 <li>MerchanCS &bull; Noah Cusimano &bull; David Goehring &bull; Christopher Prosser &bull; Oliver Spryn</li>
 <li><a href="mailto:cdboatright@gcc.edu"><i class="fa fa-envelope"></i> cdboatright@gcc.edu</a> <a href="tel:7242644622"><i class="fa fa-phone"></i> (724) 264-4622</a></li>
 </ul>
-</footer>
+</section>
 </footer>
 </body>
 </html>

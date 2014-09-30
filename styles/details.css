@@ -1,0 +1,27 @@
+section.banner {
+	background-image: -moz-radial-gradient(center center, circle cover, #FFF, #EDEDED);
+	background-image: -ms-radial-gradient(center center, circle cover, #FFF, #EDEDED);
+	background-image: -webkit-radial-gradient(center center, circle cover, #FFF, #EDEDED);
+	background-image: radial-gradient(center center, circle cover, #FFF, #EDEDED);
+	
+	text-align: center;
+}
+
+section.banner img {
+	border: 3px solid #181818;
+	height: 300px;
+	margin: 20px 0px;
+	max-height: 300px;
+	min-height: 300px;
+}
+
+section.banner footer {
+	background: #181818;
+	padding: 20px;
+}
+
+section.description {
+	margin: 40px 5% 20px 5%;
+	text-align: center;
+	width: 90%;
+}
