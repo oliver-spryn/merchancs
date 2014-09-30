@@ -16,10 +16,6 @@ html, body {
 
 h1, h2 {
 	font-family: 'Julius Sans One', sans-serif;
-    margin-top: auto;
-    margin-left: 10em;
-    padding: 1em;
-    
 }
 .page-container {
 	width: 100%;
@@ -117,27 +113,70 @@ header#main-header {
 	padding: 0px 5%;
 }
 
+header#main-header nav.navbar {
+	background: transparent;
+	border: none;
+    border-radius: 0px;
+    box-shadow: none;
+	height: 120px;
+	margin: 0px;
+	padding: 0px;
+}
 
-
-header#main-header a img.logo {
+header#main-header nav.navbar a img.logo {
 	border: 2px solid #FFF;
-	margin-top: 15px;
-    margin-left: auto;/*NEC should be centered*/
-    margin-right: auto;
-    width: 125%;
+	margin-top: 15px
 }
 
-/**
- * Form - "loginForm) styles
- * ------------------------------
-*/
-
-form div {
-	margin: 57px 0px 0px 230px;
-	width: 500px
+header#main-header nav.navbar ul.nav li a {
+	color: #FFFFFF;
 }
 
-form div.username input, div.password input  {
+header#main-header nav.navbar ul.nav li.open.themes a {
+	background-color: #666666;
+}
+
+header#main-header nav.navbar ul.nav li.themes a span.demo-disk {
+	border-radius: 100%;
+	display: inline-block;
+	height: 12px;
+	width: 12px;
+}
+
+header#main-header nav.navbar ul.nav li.themes ul {
+	background-color: #666666;
+	border: none;
+	border-radius: 0px;
+}
+
+header#main-header nav.navbar ul.nav li.themes ul li a {
+	border-left: 3px solid #666666;
+}
+
+header#main-header nav.navbar ul.nav li.themes ul li a:hover {
+	background: #888888;
+	border-left: 3px solid #CCCCCC;
+}
+
+header#main-header nav.navbar ul.nav li.themes ul li a.active {
+	border-left: 3px solid #FFFFFF;
+}
+
+header#main-header nav.navbar ul.nav li.themes ul li a.active:hover {
+	border-left: 3px solid #FFFFFF;
+}
+
+header#main-header nav.navbar ul.nav li.themes ul li a span.demo-disk {
+	margin-right: 10px;
+}
+
+header#main-header div.addItem {
+	margin: 100px 0px 0px 230px;
+	width: 600px;
+    height: 45px;
+    }
+
+header#main-header div.addItem input {
 	background-color: transparent;
 	border: 1px solid #FFF;
 	border-radius: 0px;
@@ -146,29 +185,140 @@ form div.username input, div.password input  {
 	padding: 15px;
 }
 
-form button {
+header#main-header div.addItem span.input-group-btn button {
 	background: transparent;
 	border: 1px solid #FFF;
 	border-radius: 0px;
 	color: #FFF;
 	height: 45px;
-    padding: 15px;
-    margin-left: auto;
-    margin: 30px 0px 0px 230px;
 }
 
-form li {
-	background: transparent;
-	border-radius: 0px;
-	color: #FFF;
-	height: 45px;
-    margin-left: auto;
-    margin-top: auto;
-    margin: 15px 0px 0px 150px;
+header h2{
+    color: #FFF;
+}
+
+aside h2, ul{
+    margin: 100px 0px 0px 230px;
+}
+
+section h2
+{
+    
+}
+
+section{
+    width: 90%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.merchandiseTable {
+	margin:0px;padding:0px;
+	width:100%;
+	box-shadow: 10px 10px 5px #888888;
+	border:1px solid #000000;
+    
+	-moz-border-radius-bottomleft:0px;
+	-webkit-border-bottom-left-radius:0px;
+	border-bottom-left-radius:0px;
+	
+	-moz-border-radius-bottomright:0px;
+	-webkit-border-bottom-right-radius:0px;
+	border-bottom-right-radius:0px;
+	
+	-moz-border-radius-topright:0px;
+	-webkit-border-top-right-radius:0px;
+	border-top-right-radius:0px;
+	
+	-moz-border-radius-topleft:0px;
+	-webkit-border-top-left-radius:0px;
+	border-top-left-radius:0px;
+}.CSSTableGenerator table{
+    border-collapse: collapse;
+        border-spacing: 0px;
+	width:75%;
+	height:50%;
+	margin:100px;
+    padding:0px;
+    width: 90%;
+    padding-left: 5%;
+    padding-right: 5%;
+}.CSSTableGenerator tr:last-child td:last-child {
+	-moz-border-radius-bottomright:0px;
+	-webkit-border-bottom-right-radius:0px;
+	border-bottom-right-radius:0px;
+}
+.CSSTableGenerator table tr:first-child td:first-child {
+	-moz-border-radius-topleft:0px;
+	-webkit-border-top-left-radius:0px;
+	border-top-left-radius:0px;
+}
+.CSSTableGenerator table tr:first-child td:last-child {
+	-moz-border-radius-topright:0px;
+	-webkit-border-top-right-radius:0px;
+	border-top-right-radius:0px;
+}.CSSTableGenerator tr:last-child td:first-child{
+	-moz-border-radius-bottomleft:0px;
+	-webkit-border-bottom-left-radius:0px;
+	border-bottom-left-radius:0px;
+}.CSSTableGenerator tr:hover td{
+	
+}
+.CSSTableGenerator tr:nth-child(odd){ background-color:#e5e5e5; }
+.CSSTableGenerator tr:nth-child(even)    { background-color:#ffffff; }.CSSTableGenerator td{
+	vertical-align:middle;
+	
+	
+	border:1px solid #000000;
+	border-width:0px 1px 1px 0px;
+	text-align:left;
+	padding:7px;
+	font-size:12px;
+	font-family:Arial;
+	font-weight:normal;
+	color:#000000;
+}.CSSTableGenerator tr:last-child td{
+	border-width:0px 1px 0px 0px;
+}.CSSTableGenerator tr td:last-child{
+	border-width:0px 0px 1px 0px;
+}.CSSTableGenerator tr:last-child td:last-child{
+	border-width:0px 0px 0px 0px;
+}
+.CSSTableGenerator tr:first-child td{
+		background:-o-linear-gradient(bottom, #cccccc 5%, #b2b2b2 100%);	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #cccccc), color-stop(1, #b2b2b2) );
+	background:-moz-linear-gradient( center top, #cccccc 5%, #b2b2b2 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#cccccc", endColorstr="#b2b2b2");	background: -o-linear-gradient(top,#cccccc,b2b2b2);
+
+	background-color:#cccccc;
+	border:0px solid #000000;
+	text-align:center;
+	border-width:0px 0px 1px 1px;
+	font-size:14px;
+	font-family:Verdana;
+	font-weight:bold;
+	color:#000000;
+}
+.CSSTableGenerator tr:first-child:hover td{
+	background:-o-linear-gradient(bottom, #cccccc 5%, #b2b2b2 100%);	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #cccccc), color-stop(1, #b2b2b2) );
+	background:-moz-linear-gradient( center top, #cccccc 5%, #b2b2b2 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#cccccc", endColorstr="#b2b2b2");	background: -o-linear-gradient(top,#cccccc,b2b2b2);
+
+	background-color:#cccccc;
+}
+.CSSTableGenerator tr:first-child td:first-child{
+	border-width:0px 0px 1px 0px;
+}
+.CSSTableGenerator tr:first-child td:last-child{
+	border-width:0px 0px 1px 1px;
+}
+
+.CSSTableGenerator table li{
     display: inline;
+    margin: 100px 100px 2px 750px;
+    
 }
 
-/*Start reset*/
+/*RESET*/
 
 #page-content-wrapper {
 	margin-top: 250px;
