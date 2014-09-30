@@ -9,6 +9,7 @@
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" rel="stylesheet">
 <link href="styles/main.css" rel="stylesheet">
+<link href="styles/product1.css" rel="stylesheet">
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
@@ -17,13 +18,13 @@
 
 <body class="electric">
 <header id="main-header">
-	<nav class="navbar navbar-default" role="navigation">
-		<a class="navbar-brand" href="index.html"><img alt="MerchanCS Logo" class="logo" src="images/logo.jpg"></a>
+<nav class="navbar navbar-default" role="navigation">
+<a class="navbar-brand" href="#"><img alt="MerchanCS Logo" class="logo" src="images/logo.jpg"></a>
 
-		<ul class="nav navbar-nav navbar-right">		
-			<li><a class="home" href="#"><i class="fa fa-home text-inherit"></i> Home</a></li>
-			<li><a class="search" href="#"><i class="fa fa-search text-inherit"></i> Search</a></li>
-			<li><a class="browse" href="#"><i class="fa fa-bars text-inherit"></i> Browse</a></li>
+<ul class="nav navbar-nav navbar-right">
+<li><a class="home" href="#"><i class="fa fa-home text-inherit"></i> Home</a></li>
+<li><a class="search" href="#"><i class="fa fa-search text-inherit"></i> Search</a></li>
+<li><a class="browse" href="#"><i class="fa fa-bars text-inherit"></i> Browse</a></li>
 
 <li class="dropdown themes">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="background-inherit demo-disk"></span></a>
@@ -35,7 +36,7 @@
 </ul>
 </li>
 </ul>
-
+	
 <div class="input-group search">
 <input class="form-control" type="text" placeholder="Search">
 <span class="input-group-btn">
@@ -44,21 +45,7 @@
 </div>
 	
 <ul class="personal">
-<li class="account dropdown">
-<a href="#" class="dropdown-toggle" data-toggle="dropdown">Walter J. Evancost</a>
-
-<ul class="dropdown-menu dropdown-menu-right" role="menu">
-<li>
-<span data-class="apple" href="#">
-<h2 class="background-inherit">W</h2>
-<h3>Walter J. Evancost</h3>
-<p>cdboatright@gcc.edu</p>
-<a href="#" class="btn btn-default" role="button">Sign Out</a>
-</span>
-</li>
-</ul>
-</li>
-
+<li><a href="#">Walter J. Evancost</a></li>
 <li class="cart"><a href="#"><i class="fa fa-shopping-cart"><span class="background-inherit badge pull-right">1</span></i></a></li>
 </ul>
 </nav>
@@ -89,52 +76,40 @@
 <div id="page-content-wrapper">
 	<div class="container">
 		<div class="row">
-		<div class="col-sm-3"> </div>
-		<div class="col-sm-9">
-			<h2>New and Featured</br><small>What's hot and what's not</small></h2>
-			<div class="container-fluid">
-				<div class="row">
-				<div class="col-sm-3">
-					<a href="#"><img class="img-responsive thumbnail" src="images/floppy-disks.jpg"></a>
-					<h6>Floppy disks </br><small>From $0.01</small></h6>
+			<div class="product-container">
+				
+				<div class="product-image-container">
+					<img class="product-image" src="images/floppy-disks.jpg">
 				</div>
-				<div class="col-sm-3">
-					<a href="#"><img class="img-responsive thumbnail" src="images/strunk-and-white.jpg"></a>
-					<h6>The Elements of Style</br><small>From $4.95</small></h6>
+				<div class="product-info-container">
+					<h2> Floppy disks </h2>
+					<p> These are floppy disks </p>
+					<h2> Price: $X.XX </h2>
+					<hr/>
+					<div class="order-controls">
+						<span> Quantity: <input type="textbox" /> </span>
+						<input type="button" value="Add to Cart" />
+					</div>
 				</div>
+				<div class="review-container">
+					<h2> Reviews </h2>
+					<hr/>
+					<div class="review">
+						<img class="review-profile" src="#" alt="profile picture">
+						<h3> Username </h3><br/>
+						<p> User Review </p>
+					</div>
+					<hr/>
+					<div class="review">
+						<img class="review-profile" src="#" alt="profile picture">
+						<h3> Username </h3><br/>
+						<p> User Review </p>
+						
+					</div>
 				</div>
 			</div>
 		</div>
-		</div>
 	</div>
-</div>
-
-<footer id="main-footer">
-<section class="divider">
-<img alt="MerchanCS Footer Logo" src="images/logo-footer.jpg"/>
-</section>
-	
-<ul class="profiles">
-<li><span><img alt="Cory Boatright" src="https://my.gcc.edu/icsfileservershare/icsphotos/467190.jpg"/></span></li>
-<li><span><img alt="William Birmingham" src="https://my.gcc.edu/icsfileservershare/icsphotos/275544.jpg"/></span></li>
-<li><span><img alt="Dorian Yeager" src="https://my.gcc.edu/icsfileservershare/icsphotos/200391.jpg"/></span></li>
-<li><span><img alt="Brian Dellinger" src="https://my.gcc.edu/icsfileservershare/icsphotos/250085.jpg"/></span></li>
-<li><span><img alt="Lory Al Moakar" src="https://my.gcc.edu/icsfileservershare/icsphotos/465641.jpg"/></span></li>
-</ul>
-
-<footer class="mega-footer">
-<ul>
-<li>MerchanCS &bull; Noah Cusimano &bull; David Goehring &bull; Christopher Prosser &bull; Oliver Spryn</li>
-<li><a href="mailto:cdboatright@gcc.edu"><i class="fa fa-envelope"></i> cdboatright@gcc.edu</a> <a href="tel:7242644622"><i class="fa fa-phone"></i> (724) 264-4622</a></li>
-</ul>
-</footer>
-</footer>
-
+</div> 
 </body>
-<footer>
-	<div class="contact info">
-		
-	</div>
-</footer>
-
 </html>
