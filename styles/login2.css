@@ -1,0 +1,186 @@
+/**
+ * Global styles
+ * ------------------------------
+*/
+
+* {
+	font-family: 'Open Sans', sans-serif;
+	outline: none;
+}
+
+html, body {
+	background-color: #EDEDED;
+	height: 100%;
+	width: 100%;
+}
+
+h1, h2 {
+	font-family: 'Julius Sans One', sans-serif;
+    margin-top: auto;
+    margin-left: 10em;
+    padding: 1em;
+    
+}
+.page-container {
+	width: 100%;
+	margin: 0;
+	height: 100%;
+}
+.content-container {
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+}
+.featured-products {
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/**
+ * Themes:
+ *  - Apple   : #F26767
+ *  - Electric: #0CE3F7
+ *  - Lime    : #36FFD1
+ *  - Oak     : #BA9E76
+ * ------------------------------
+*/
+
+body.apple .background-inherit {
+	background-color: #F26767;
+	transition: all .25s ease-in-out;
+}
+
+body.apple .text-inherit {
+	color: #F26767;
+	transition: all .25s ease-in-out;
+}
+
+.apple-instance {
+	background-color: #F26767;
+	color: #F26767;
+}
+
+body.electric .background-inherit {
+	background-color: #0CE3F7;
+	transition: all .25s ease-in-out;
+}
+
+body.electric .text-inherit {
+	color: #0CE3F7;
+	transition: all .25s ease-in-out;
+}
+
+.electric-instance {
+	background-color: #0CE3F7;
+	color: #0CE3F7;
+}
+
+body.lime .background-inherit {
+	background-color: #36FFD1;
+	transition: all .25s ease-in-out;
+}
+
+body.lime .text-inherit {
+	color: #36FFD1;
+	transition: all .25s ease-in-out;
+}
+
+.lime-instance {
+	background-color: #36FFD1;
+	color: #36FFD1;
+}
+
+body.oak .background-inherit {
+	background-color: #BA9E76;
+	transition: all .25s ease-in-out;
+}
+
+body.oak .text-inherit {
+	color: #BA9E76;
+	transition: all .25s ease-in-out;
+}
+
+.oak-instance {
+	background-color: #BA9E76;
+	color: #BA9E76;
+}
+
+/**
+ * Header styles
+ * ------------------------------
+*/
+
+header#main-header {
+	background: #282B2D;
+	height: 130px;
+	padding: 0px 5%;
+}
+
+
+
+header#main-header a img.logo {
+	border: 2px solid #FFF;
+	margin-top: 15px;
+    margin-left: auto;/*NEC should be centered*/
+    margin-right: auto;
+    width: 125%;
+}
+
+/**
+ * Form - "loginForm) styles
+ * ------------------------------
+*/
+
+form div {
+	margin: 40px 0px 0px 230px;
+	width: 600px;
+    display: inline;
+}
+
+form div.username input, div.password input, div.confirmPassword input, div.email input, div.dateOfBirth input {
+	background-color: transparent;
+	border: 1px solid #FFF;
+	border-radius: 0px;
+	color: #000;
+	height: 45px;
+	padding: 15px;
+}
+
+form button {
+	background: transparent;
+	border: 1px solid #FFF;
+	border-radius: 0px;
+	color: #FFF;
+	height: 45px;
+    padding: 15px;
+    margin-left: auto;
+    margin: 20px 0px 0px 230px;
+}
+
+form li {
+	background: transparent;
+	border-radius: 0px;
+	color: #FFF;
+	height: 45px;
+    margin-left: auto;
+    margin-top: auto;
+    margin: 15px 0px 0px 150px;
+    display: inline;
+}
+
+/*Start reset*/
+
+#page-content-wrapper {
+	margin-top: 250px;
+}
+
+.product-image-container {
+	float: left;
+}
+.product-info-container {
+	clear: right;
+}
+.review-container{
+	clear: both;
+}
