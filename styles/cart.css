@@ -1,8 +1,20 @@
-.subtotal-div {
+.total-div {
 	float: right;
+	border-top: 1px solid #282B2D;
+	width: 100%;
 }
-.subtotal-div h3 {
+.total-div h3 {
+	float: right;
+	clear: both;
 	font-size: 1.4em;
+}
+.total-div input {
+	float: right;
+	clear: both;
+}
+
+#clear-cart {
+	float: left;
 }
 ul {
 	list-style-type: none;
@@ -12,14 +24,53 @@ ul {
 ul li {
 	list-style-type: none;
 }
-.quantity-box {
-	width: 60px;
-}
 
+.column-header {
+	text-align: center;
+}
+.cart-image {
+	padding: 10px 0px 10px 0px;
+}
 .cart-info {
 	width: 400px;
 }
+.cart-info h3 {
+	margin: 0;
+}
+.cart-info p {
+	padding-top: 10px;
+}
+
+.cart-quantity {
+	text-align: center;
+}
+.cart-quantity span:first-of-type{
+	margin-right: 10px;
+}
+.cart-quantity span:last-of-type {
+	margin-left: 10px;
+}
+.quantity-box {
+	width: 50%;
+}
+
 
 .cart-info li {
 	width: 300px;
+}
+.item-row {
+	border-top: 1px solid #282B2D;
+}
+.cart-price {
+	text-align: center;
+}
+.item-price {
+	width: 100%;
+	text-align: center;
+}
+.cart-subtotal {
+	text-align: center;
+}
+.item-subtotal {
+	width: 100%;
 }
