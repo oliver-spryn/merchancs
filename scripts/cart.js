@@ -1,11 +1,35 @@
 window.onload = function() {
 
 
-	//Subtotal/Total checking
+
 	var inputs = document.getElementsByClassName('quantity-box');
 	var subtotals = document.getElementsByClassName('item-subtotal');
 	var total = document.getElementById("total-value");
 	
+	var deleteControls = document.getElementsByClassName('delete-item');
+	
+	var clearCartControl = document.getElementById('clear-cart');
+	
+	var checkoutControl = document.getElementById)('checkout-button');
+	
+	//Remove item from cart
+	for(var i = 0;i < deleteControls.length; i++) {
+		deleteControls[i].onclick = function() {
+		
+		};
+	}
+	
+	//Clear cart
+	clearCartControl.onclick = function() {
+	
+	};
+	
+	//Checkout
+	checkoutControl.onclick = function() {
+	
+	};
+	
+	//Subtotal/Total checking
 	for(var i = 0;i < inputs.length; i++) {
 		var price = inputs[i].parentNode.parentNode.childNodes[5].childNodes[1].innerHTML;
 		price = price.replace('$','');

@@ -1,19 +1,28 @@
-.account-list {
-	width: 80%;
-	padding: 0;
-	margin: 0;
-}
-.account-list li {
-	list-style-type: none;
-	margin: 0;
-	padding: 0;
-	height: 30px;
+tr {
+	height: 80px;
+	border-bottom: 1px solid #cdcdcd;
 }
 
-.payment, .address {
-	height: 70px !important;
-}
 input {
 	float: right;
 	
+}
+
+.topic-column {
+	width: 150px;
+}
+.data-column {
+	width: 200px;
+	text-align: center;
+}
+.change-column {
+	width: 300px;
+	text-align: right;
+}
+
+.edit-email {
+	display: none;
+}
+.edit-password {
+	display: none;
 }
