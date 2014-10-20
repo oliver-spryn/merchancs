@@ -50,4 +50,6 @@ $(function() {
 			allowClose = true;
 		}
 	});
+	
+	
 });
