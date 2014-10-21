@@ -1,0 +1,27 @@
+<root>
+	<category name="New and Featured" sub="What's hot and what's not">
+		<item name="Floppy Disks" price="0.01" img="images/floppy-disks.jpg"/>
+		<item name="The Elements of Style" price="4.95" img="images/strunk-and-white.jpg"/>
+	</category>
+	<category name="Specialty Items" sub="The best of the best">
+		<item name="Autographed Photos" price="0.89" img="images/CoryBoatright.jpg"/>
+		<item name="Dr. B's Favorite Words (Uncensored)" price="99.99" img="images/Dictionary.jpg"/>
+		<item name="Dr. B's Apple Newton" price="999.95" img="images/newton.jpg"/>
+		<item name="Dr. Yeager's Comic Collection" price="3999.95" img="images/calvin-and-hobbes.jpg"/>	
+	</category>
+	<category name="Test Answers" sub="Keep it secret, keep it safe">
+		<item name="All of them" price="9999.99" img="images/test_answers.jpg"/>
+	</category>
+	<category name="Tech equipment" sub="When the TLC lets you down">
+		<item name="Floppy Disks" price="0.01" img="images/floppy-disks.jpg"/>
+		<item name="DVORAK keyboard" price="13.95" img="images/dvorak.jpg"/>
+		<item name="Replacement Laptop" price="999.99" img="images/laptop.jpg"/>
+		<item name="Eight track" price="24.95" img="images/eight_track.jpg"/>		
+	</category>
+	<category name="Miscelaneous" sub="The goods">
+		<item name="Advice" price="0.05" img="images/Lucy.jpg"/>
+		<item name="Haircut" price="8.99" img="images/haircut.jpg"/>
+		<item name="Coffee (10 lb)" price="24.95" img="images/coffee_smile.jpg"/>
+		<item name="Directions to secret lair" price="34.95" img="images/Evil_Fortress.jpg"/>			
+	</category>
+</root>
