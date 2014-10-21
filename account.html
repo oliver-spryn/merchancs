@@ -14,6 +14,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 <script src="scripts/main.js"></script>
+<script src="scripts/account.js"></script>
 </head>
 
 <body class="electric">
@@ -112,29 +113,30 @@
 										<span><b>Email:</b></span>
 									</td>
 									<td class="data-column">
-										<span>user123@gcc.edu</span>
-										<input type="textbox" class="edit-email" value="user123@gcc.edu"/>
+										<span class='email-data'>user123@gcc.edu</span>
+										<input type="textbox" class="edit-email hide-class" value="user123@gcc.edu"/>
 									</td>
 									<td class="change-column">
-										<input type="button" value="Change" />
+										<input type="button" id="email-change" class="email-data" value="Change" />
+										<input type="button" id="email-submit" class="edit-email hide-class" value="Submit" />
 									</td>
 								</tr>
 								<tr>
 									<td class="topic-column">
-										<span class="password-topic"><b>Password:</b></span>
-										<span class="edit-password"><b>New Password: </b></span>
-										<span class="edit-password"><b>Confirm New Password: </b></span>
-										<span class="edit-password"><b>Current Password:</b></span>
+										<span class="password-data"><b>Password:</b></span>
+										<span class="edit-password hide-class"><b>New Password:<br> </b></span>
+										<span class="edit-password hide-class"><b>Confirm Pasword:<br> </b></span>
+										<span class="edit-password hide-class"><b>Current Pwd:</b></span>
 									</td>
 									<td class="data-column">
 										<span class="password-data">********</span>
-										<input type="textbox" id="new-password" class="edit-password" value=""/>
-										<input type="textbox" id="confirm-password" class="edit-password" value=""/>
-										<input type="textbox" id="current-password" class="edit-password" value=""/>
+										<input type="textbox" id="new-password" class="edit-password hide-class" value=""/>
+										<input type="textbox" id="confirm-password" class="edit-password hide-class" value=""/>
+										<input type="textbox" id="current-password" class="edit-password hide-class" value=""/>
 									</td>
 									<td class="change-column">
-										<input id="password-change" type="button" value="Change"/>
-										<input id="password-submit" type="button" class="edit-password" value="Submit"/>
+										<input id="password-change" class='password-data' type="button" value="Change"/>
+										<input id="password-submit" type="button" class="edit-password hide-class" value="Submit"/>
 									</td>
 								</tr>
 								<tr>
@@ -142,10 +144,14 @@
 										<span><b>Payment Info:</b></span>
 									</td>
 									<td class="data-column">
-										<span>Credit Card<br>Master Card<br>XXXX-XXXX-XXXX-1234</span>
+										<span class="payment-data">Credit Card<br>Master Card<br>XXXX-XXXX-XXXX-1234</span>
+										<input class="edit-payment hide-class" type="textbox" value=""/>
+										<input class="edit-payment hide-class" type="textbox" value=""/>
+										<input class="edit-payment hide-class" type="textbox" value=""/>
 									</td>
 									<td class="change-column">
-										<input type="button" value="Change"/>
+										<input id="payment-change" type="button" class="payment-data" value="Change"/>
+										<input id="payment-submit" class="edit-payment hide-class" type="button" value="submit"/>
 									</td>
 								</tr>
 								<tr>
@@ -153,38 +159,16 @@
 										<span><b>Shipping Address:</b></span>
 									</td>
 									<td class="data-column">
-										<span>200 Campus Dr. <br>Grove City, PA, 16127 </span>
+										<span class="shipping-data">200 Campus Dr. <br>Grove City, PA, 16127 </span>
+										<input type="textbox" class="edit-shipping hide-class" value=""/>
+										<input type="textbox" class="edit-shipping hide-class" value=""/>
 									</td>
 									<td class="change-column">
-										<input type="button" value="Change"/>
+										<input type="button" id="shipping-change" class='shipping-data' value="Change"/>
+										<input type="button" id="shipping-submit" class="edit-shipping hide-class" value="Submit"/>
 									</td>
 							</table>
-							<!--<ul class="account-list">
-								<li class="username">
-									<span><b>Username:</b></span>
-									<span class="name">User</span>
-								</li>
-								<li class="email">
-									<span><b>Email:</b></span>
-									<span>user123@gcc.edu</span>
-									<input type="button" value="Change"/>
-								</li>
-								<li class="password">
-									<span><b>Password:</b></span>
-									<span>********</span>
-									<input type="button" value="Change"/>
-								</li>
-								<li class="payment">
-									<span><b>Payment Info:</b></span>
-									<span>Credit Card<br/> Mastercard <br/> XXXX-XXXX-XXXX-1234 </span>
-									<input type="button" value="Change"/>
-								</li>
-								<li class="address">
-									<span><b>Shipping Address:</b></span>
-									<span>200 Campus Drive <br/> Grove City, PA, 16127 </span>
-									<input type="button" value="Change"/>
-								</li>
-							</ul>-->
+							
 						</div>
 					</div>
 				</div>
