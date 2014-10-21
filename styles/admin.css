@@ -185,12 +185,13 @@ header#main-header div.addItem input {
 	padding: 15px;
 }
 
-header#main-header div.addItem span.input-group-btn button {
+form {
 	background: transparent;
 	border: 1px solid #FFF;
 	border-radius: 0px;
 	color: #FFF;
 	height: 45px;
+    color:#000000;
 }
 
 header h2{
@@ -233,7 +234,7 @@ section{
 	-moz-border-radius-topleft:0px;
 	-webkit-border-top-left-radius:0px;
 	border-top-left-radius:0px;
-}.CSSTableGenerator table{
+}.CSSTableGenerator table, form{
     border-collapse: collapse;
         border-spacing: 0px;
 	width:75%;
@@ -243,7 +244,16 @@ section{
     width: 90%;
     padding-left: 5%;
     padding-right: 5%;
-}.CSSTableGenerator tr:last-child td:last-child {
+}
+input[name="newItemText"]{
+   width:600px;
+}
+input[name="newItemButton"]{
+    width:150px;
+    height: 50px;
+}
+
+.CSSTableGenerator tr:last-child td:last-child {
 	-moz-border-radius-bottomright:0px;
 	-webkit-border-bottom-right-radius:0px;
 	border-bottom-right-radius:0px;

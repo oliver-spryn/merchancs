@@ -14,6 +14,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 <script src="scripts/main.js"></script>
+    <script src="scripts/login.js"></script>
 </head>
 
 <body class="electric">
@@ -22,7 +23,7 @@
     <a id="logo" class="navbar-brand" href="#"><img alt="MerchanCS Logo" class="logo" src="images/logo.jpg"></a>
     
 </header>
-<form id="loginForm">
+<form  name="loginForm" action="" onsubmit="return validateForm()" method="">
 <h2>MerchanCS Login Credentials</h2>
 
 
@@ -45,16 +46,19 @@
 -->
 	
 <div class="input-group username">
-<input class="form-control" type="text" placeholder="Username">
+<input name="username" class="form-control" type="text" placeholder="Username">
 </div>
     
 <div class="input-group password">
-<input class="form-control" type="text" placeholder="Password">
+<input name="password" class="form-control" type="text" placeholder="Password">
 <span class="input-group-btn"></span>  
 </div>
     
+ <input type="submit" name="loginButton" value="Submit">   
+
+<!--<button id = "submitButton" class="btn btn-default" type="button" onclick="window.location = 'login2.html';">Submit</button>-->
     
-<button id = "submitButton" class="btn btn-default" type="button" onclick="window.location = 'login2.html';">Submit</button>
+    
 <li><a class="text-inherit" href="#">Forgot Password</a></li>
 </form>
 

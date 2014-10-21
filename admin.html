@@ -14,6 +14,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 <script src="scripts/main.js"></script>
+<script src="scripts/admin.js"></script>
 </head>
 
 <body class="electric">
@@ -38,12 +39,15 @@
 
 <h2>MerchanCS - Administration</h2>
 	
-<div class="input-group addItem">
+    
+
+    
+<!--<div class="input-group addItem">
 <input class="form-control" type="text" placeholder="+ Add New Item">
 <span class="input-group-btn">
 <button class="btn btn-default" type="button">Submit</button>
 </span>
-</div>
+</div>-->
 	
 
 </nav>
@@ -53,6 +57,11 @@
 	
 <nav>
 
+<form name="addItemForm" action="" onsubmit="return validateForm()" method="">
+<input type="text" name="newItemText" placeholder="+ Add New Item">
+<input type="submit" name="newItemButton"  value="Submit">
+</form>
+    
     <div class="CSSTableGenerator" >
                 <table >
                     <tr>
