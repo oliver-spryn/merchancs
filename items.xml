@@ -18,7 +18,7 @@
 		<item name="Replacement Laptop" price="999.99" img="images/laptop.jpg"/>
 		<item name="Eight track" price="24.95" img="images/eight_track.jpg"/>		
 	</category>
-	<category name="Miscelaneous" sub="The goods">
+	<category name="Miscellaneous" sub="The goods">
 		<item name="Advice" price="0.05" img="images/Lucy.jpg"/>
 		<item name="Haircut" price="8.99" img="images/haircut.jpg"/>
 		<item name="Coffee (10 lb)" price="24.95" img="images/coffee_smile.jpg"/>

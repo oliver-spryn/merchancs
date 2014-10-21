@@ -10,6 +10,7 @@
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" rel="stylesheet">
 <link href="styles/main.css" rel="stylesheet">
 <link href="styles/details.css" rel="stylesheet">
+<link href="styles/search.css" rel="stylesheet">
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
@@ -63,7 +64,7 @@
 </ul>
 </li>
 
-<li class="cart"><a href="cart.php"><i class="fa fa-shopping-cart"><span class="background-inherit badge pull-right">1</span></i></a></li>
+<li class="cart"><a href="cart.php"><i class="fa fa-shopping-cart"><span class="background-inherit badge pull-right" id="cart-count">1</span></i></a></li>
 </ul>
 </nav>
 </header>
