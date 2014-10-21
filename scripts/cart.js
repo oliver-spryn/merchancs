@@ -10,7 +10,7 @@ window.onload = function() {
 	
 	var clearCartControl = document.getElementById('clear-cart');
 	
-	var checkoutControl = document.getElementById)('checkout-button');
+	var checkoutControl = document.getElementById('checkout-button');
 	
 	//Remove item from cart
 	for(var i = 0;i < deleteControls.length; i++) {

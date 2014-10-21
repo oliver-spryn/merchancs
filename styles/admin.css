@@ -185,12 +185,13 @@ header#main-header div.addItem input {
 	padding: 15px;
 }
 
-header#main-header div.addItem span.input-group-btn button {
+form {
 	background: transparent;
 	border: 1px solid #FFF;
 	border-radius: 0px;
 	color: #FFF;
 	height: 45px;
+    color:#000000;
 }
 
 header h2{
@@ -233,7 +234,7 @@ section{
 	-moz-border-radius-topleft:0px;
 	-webkit-border-top-left-radius:0px;
 	border-top-left-radius:0px;
-}.CSSTableGenerator table{
+}.CSSTableGenerator table, form{
     border-collapse: collapse;
         border-spacing: 0px;
 	width:75%;
@@ -243,7 +244,16 @@ section{
     width: 90%;
     padding-left: 5%;
     padding-right: 5%;
-}.CSSTableGenerator tr:last-child td:last-child {
+}
+input[name="newItemText"]{
+   width:600px;
+}
+input[name="newItemButton"]{
+    width:150px;
+    height: 50px;
+}
+
+.CSSTableGenerator tr:last-child td:last-child {
 	-moz-border-radius-bottomright:0px;
 	-webkit-border-bottom-right-radius:0px;
 	border-bottom-right-radius:0px;
@@ -287,7 +297,7 @@ section{
 .CSSTableGenerator tr:first-child td{
 		background:-o-linear-gradient(bottom, #cccccc 5%, #b2b2b2 100%);	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #cccccc), color-stop(1, #b2b2b2) );
 	background:-moz-linear-gradient( center top, #cccccc 5%, #b2b2b2 100% );
-	background: -o-linear-gradient(top,#cccccc,b2b2b2);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#cccccc", endColorstr="#b2b2b2");	background: -o-linear-gradient(top,#cccccc,b2b2b2);
 
 	background-color:#cccccc;
 	border:0px solid #000000;
@@ -301,7 +311,7 @@ section{
 .CSSTableGenerator tr:first-child:hover td{
 	background:-o-linear-gradient(bottom, #cccccc 5%, #b2b2b2 100%);	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #cccccc), color-stop(1, #b2b2b2) );
 	background:-moz-linear-gradient( center top, #cccccc 5%, #b2b2b2 100% );
-	background: -o-linear-gradient(top,#cccccc,b2b2b2);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr="#cccccc", endColorstr="#b2b2b2");	background: -o-linear-gradient(top,#cccccc,b2b2b2);
 
 	background-color:#cccccc;
 }

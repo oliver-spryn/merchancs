@@ -1,5 +1,8 @@
 <?php require('header.php'); ?>
 
+<script src="scripts/cart.js"></script>
+<link href="styles/cart.css" rel="stylesheet">
+
 <section class="banner">
 <img alt="floppies" src="images/floppy-disks.jpg"/>
 	

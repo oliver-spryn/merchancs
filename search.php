@@ -1,5 +1,7 @@
 <?php require('header.php') ?>
 
+<link href="styles/search.css" rel="stylesheet">
+
 <div id="page-content-wrapper">
 	<div class="container">
 		<div class="row">
