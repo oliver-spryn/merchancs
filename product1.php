@@ -1,10 +1,24 @@
-<?php require('header.php'); ?>
+<?php 
+require('includes/helpers.php'); 
+echoHead();
+echoStyles();
+?>
+
+<!-- Add My Style Links Here -->
+<link href="styles/product1.css" rel="stylesheet">
+
+<?php echoScripts(); ?>
+
+<!-- Add My Scripts Here -->
+
+<?php require('includes/header.php'); ?>
+
+<!-- Add My Content Here -->
 
 <div id="page-content-wrapper">
 	<div class="container">
 		<div class="row">
-			<div class="product-container">
-				
+			<div class="product-container">				
 				<div class="product-image-container">
 					<img class="product-image" src="images/floppy-disks.jpg">
 				</div>
@@ -30,8 +44,7 @@
 					<div class="review">
 						<img class="review-profile" src="#" alt="profile picture">
 						<h3> Username </h3><br/>
-						<p> User Review </p>
-						
+						<p> User Review </p>						
 					</div>
 				</div>
 			</div>
@@ -39,4 +52,4 @@
 	</div>
 </div> 
 
-<?php require('footer.php'); ?>
+<?php require('includes/footer.php'); ?>

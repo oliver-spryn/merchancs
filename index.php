@@ -1,4 +1,19 @@
-<?php require('header.php'); ?>
+<?php 
+require('includes/helpers.php'); 
+echoHead();
+echoStyles();
+?>
+
+<!-- Add My Style Links Here -->
+<link href="styles/categories.css" rel="stylesheet">
+
+<?php echoScripts(); ?>
+
+<!-- Add My Scripts Here -->
+
+<?php require('includes/header.php'); ?>
+
+<!-- Add My Content Here -->
 
 <div id="page-content-wrapper">
 	<div class="container">
@@ -15,4 +30,4 @@
 	</div>
 </div>
 
-<?php require('footer.php'); ?>
+<?php require('includes/footer.php'); ?>

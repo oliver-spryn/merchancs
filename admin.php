@@ -1,22 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>MerchanCS Template</title>
+<?php 
+require('includes/helpers.php'); 
+echoHead();
+?>
 
-<link href="https://fonts.googleapis.com/css?family=Lato:100,300,400|Open+Sans:400,300|Julius+Sans+One" rel="stylesheet">
+<!-- Add My Style Links Here -->
+<!-- Exclude main.css from admin page -->
+
+<link href="https://fonts.googleapis.com/css?family=Lato:100,300,400%7COpen+Sans:400,300%7CJulius+Sans+One" rel="stylesheet">
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" rel="stylesheet">
-
 <link href="styles/admin.css" rel="stylesheet">
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-<script src="scripts/main.js"></script>
+<?php echoScripts(); ?>
+<!-- Add My Scripts Here -->
 <script src="scripts/admin.js"></script>
 </head>
 
+<!-- Custom header for admin page -->
 <body class="electric">
 <header id="main-header">
 <nav class="navbar navbar-default" role="navigation">
@@ -60,8 +61,7 @@
 <form name="addItemForm" action="" onsubmit="return validateForm()" method="">
 <input type="text" name="newItemText" placeholder="+ Add New Item">
 <input type="submit" name="newItemButton"  value="Submit">
-</form>
-    
+</form>    
     <div class="CSSTableGenerator" >
                 <table >
                     <tr>
@@ -108,12 +108,7 @@
                     </tr>
                 </table>
             </div>
-
 </nav>
 </section>
-
-    
-            
-
 </body>
 </html>

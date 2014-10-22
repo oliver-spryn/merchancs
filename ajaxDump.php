@@ -1,5 +1,5 @@
 <?php
-require('helpers.php');
+require('includes/helpers.php');
 
 switch($_GET['type'])
 {
