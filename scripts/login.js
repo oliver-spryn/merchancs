@@ -5,4 +5,5 @@ function validateForm() {
         alert("Please enter a username and password");
         return false;
     }
+	return true;
 }
