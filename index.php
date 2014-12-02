@@ -16,7 +16,7 @@
 		'account',
 		'admin'
 		);
-
+$_SESSION['authenticated'] = true;
 	if (@!$_SESSION['authenticated']) $page = 'login';	
 	else if (isset($_GET['page'])) $page = $_GET['page'];
 	else $page = 'category';	

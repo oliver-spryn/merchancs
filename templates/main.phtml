@@ -1,3 +1,7 @@
+<?php
+//Generate the absolute URL to the assets
+	$URL = dirname($_SERVER['SCRIPT_NAME']) . "/";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,15 +12,15 @@
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
 <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" rel="stylesheet">
-<link href="../styles/main.css" rel="stylesheet">
+<link href="<?php echo $URL; ?>styles/main.css" rel="stylesheet">
 
-<?php echo "<link href='../styles/{$page}.css' rel='stylesheet'>" ?>
+<?php echo "<link href='" . $URL . "styles/{$page}.css' rel='stylesheet'>" ?>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-<script src="scripts/main.js"></script>
+<script src="<?php echo $URL; ?>scripts/main.js"></script>
 
-<?php echo "<script src='../scripts/{$page}.js'></script>" ?>
+<?php echo "<script src='" . $URL . "scripts/{$page}.js'></script>" ?>
 
 </head>
 <body class="electric">
