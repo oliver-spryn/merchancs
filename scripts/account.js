@@ -29,11 +29,12 @@ window.onload = function() {
 		
 	};
 	emailSubmitBtn.onclick = function(e) {
-		e.preventDefault();
+		//e.preventDefault();
 		var emailEditBox = document.getElementsByClassName('edit-email')[0];
 		var emailBox = document.getElementsByClassName('email-data')[0];
 		if(emailEditBox.value == "") {
 			alert('Please enter a valid email address');
+			e.preventDefault();
 			return;
 		}
 		alert("Postback to server for data update");
@@ -66,12 +67,13 @@ window.onload = function() {
 		}
 	};
 	pwdSubmitBtn.onclick = function(e) {
-		e.preventDefault();
+		//e.preventDefault();
 		var currentPassword = document.getElementsByClassName('password-data');
 		var editPassword = document.getElementsByClassName('edit-password');
 		
 		if(editPassword[3].value == "" || editPassword[4].value == "" || editPassword[5].value == "") {
 			alert("Please enter a valid password");
+			e.preventDefault();
 			return;
 		}
 		
@@ -108,7 +110,7 @@ window.onload = function() {
 		}
 	};
 	paySubmitBtn.onclick = function(e) {
-		e.preventDefault();
+		//e.preventDefault();
 		
 		var payData = document.getElementsByClassName('payment-data');
 		var payCurrent = payData[0].innerHTML.split("<br>");
@@ -120,6 +122,7 @@ window.onload = function() {
 		
 		if(payEditBox1.value == "" || payEditBox2.value == "" || payEditBox3.value == "") {
 			alert("Please enter valid payment information");
+			e.preventDefault();
 			return;
 		}
 		alert("Postback to server for data update");
@@ -155,7 +158,7 @@ window.onload = function() {
 		}
 	};
 	shipSubmitBtn.onclick = function(e) {
-		e.preventDefault();
+		//e.preventDefault();
 		var shipData = document.getElementsByClassName('shipping-data');
 		var shipCurrent = shipData[0].innerHTML.split("<br>");
 		
@@ -166,6 +169,7 @@ window.onload = function() {
 		
 		if(shipEditBox1.value == "" || shipEditBox2.value == "") {
 			alert("Please enter a valid shipping address");
+			e.preventDefault();
 			return;
 		}
 		alert("Postback to server for data update");

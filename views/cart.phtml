@@ -1,3 +1,6 @@
+<?php
+	$this->fetchCartData();
+?>
 <div id="page-content-wrapper">
 	<div class="container">
 		<div class="row">
@@ -25,6 +28,33 @@
 										</div>
 									</td>
 								</tr>
+								<?php 
+									foreach($this->cartItems as $i) {
+										echo '<tr class="item-row"> 
+												<td class="cart-image">
+													<div class="col-sm-3">
+														<img class="image-responsive thumbnail" src="'.$i->image.'" alt="'.$i->name.'" >
+														<a href="#" class="delete-item">Delete</a>
+													</div>
+												</td>
+												<td class="cart-info">
+													<h3><a href="'.$i->pageURL.'">'.$i->name.'</a></h3>
+													<p>'.$i->description.'</p>
+												</td>
+												<td class="cart-price">
+													<span class="item-price">'.$i->price.'</span>
+												</td>
+												<td class="cart-quantity">
+													<span>+</span>
+													<input class="quantity-box" type="text" value="1" maxlength="6" />
+													<span>=</span>									</td>
+												<td class="cart-subtotal">
+													<span class="item-subtotal"></span>
+												</td>
+											</tr>';
+									}
+								?>
+								<!--
 								<tr class="item-row"> 
 									<td class="cart-image">
 										<div class="col-sm-3">
@@ -69,7 +99,7 @@
 									<td class="cart-subtotal">
 										<span class="item-subtotal">$43.99</span>
 									</td>
-								</tr>
+								</tr>-->
 									</tbody>
 							</table>
 							

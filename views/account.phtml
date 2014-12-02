@@ -1,3 +1,6 @@
+<?php
+	$this->fetchAccountInfo();
+?>
 <div id="page-content-wrapper">
 	<div class="container">
 		<div class="row">
@@ -14,7 +17,7 @@
 										<span><b>Username:</b></span>
 									</td>
 									<td class="data-column">
-										<span>User</span>
+										<span><?php echo $this->user; ?></span>
 									</td>
 									<td class="change-column"></td>
 								</tr>
@@ -23,12 +26,14 @@
 										<span><b>Email:</b></span>
 									</td>
 									<td class="data-column">
-										<span class='email-data'>user123@gcc.edu</span>
+										<span class='email-data'><?php echo $this->email; ?></span>
 										<input type="textbox" class="edit-email hide-class" value="user123@gcc.edu"/>
 									</td>
 									<td class="change-column">
 										<input type="button" id="email-change" class="email-data" value="Change" />
-										<input type="button" id="email-submit" class="edit-email hide-class" value="Submit" />
+										<form action="http://localhost/project/merchancs/index.php?page=account">
+											<input type="submit" id="email-submit" class="edit-email hide-class" value="Submit" />
+										</form>
 									</td>
 								</tr>
 								<tr>
@@ -39,14 +44,16 @@
 										<span class="edit-password hide-class"><b>Current Pwd:</b></span>
 									</td>
 									<td class="data-column">
-										<span class="password-data">********</span>
+										<span class="password-data"><?php echo $this->password; ?></span>
 										<input type="textbox" id="new-password" class="edit-password hide-class" value=""/>
 										<input type="textbox" id="confirm-password" class="edit-password hide-class" value=""/>
 										<input type="textbox" id="current-password" class="edit-password hide-class" value=""/>
 									</td>
 									<td class="change-column">
 										<input id="password-change" class='password-data' type="button" value="Change"/>
-										<input id="password-submit" type="button" class="edit-password hide-class" value="Submit"/>
+										<form action="http://localhost/project/merchancs/index.php?page=account">
+											<input type="submit" id="password-submit" class="edit-password hide-class" value="Submit"/>
+										</form>
 									</td>
 								</tr>
 								<tr>
@@ -54,14 +61,16 @@
 										<span><b>Payment Info:</b></span>
 									</td>
 									<td class="data-column">
-										<span class="payment-data">Credit Card<br>Master Card<br>XXXX-XXXX-XXXX-1234</span>
+										<span class="payment-data"><?php echo $this->payment; ?></span>
 										<input class="edit-payment hide-class" type="textbox" value=""/>
 										<input class="edit-payment hide-class" type="textbox" value=""/>
 										<input class="edit-payment hide-class" type="textbox" value=""/>
 									</td>
 									<td class="change-column">
 										<input id="payment-change" type="button" class="payment-data" value="Change"/>
-										<input id="payment-submit" class="edit-payment hide-class" type="button" value="submit"/>
+										<form action="http://localhost/project/merchancs/index.php?page=account">
+											<input type="submit" id="payment-submit" class="edit-payment hide-class" value="submit"/>
+										</form>
 									</td>
 								</tr>
 								<tr>
@@ -69,13 +78,15 @@
 										<span><b>Shipping Address:</b></span>
 									</td>
 									<td class="data-column">
-										<span class="shipping-data">200 Campus Dr. <br>Grove City, PA, 16127 </span>
+										<span class="shipping-data"><?php echo $this->shipping; ?></span>
 										<input type="textbox" class="edit-shipping hide-class" value=""/>
 										<input type="textbox" class="edit-shipping hide-class" value=""/>
 									</td>
 									<td class="change-column">
 										<input type="button" id="shipping-change" class='shipping-data' value="Change"/>
-										<input type="button" id="shipping-submit" class="edit-shipping hide-class" value="Submit"/>
+										<form action="http://localhost/project/merchancs/index.php?page=account">
+											<input type="submit" id="shipping-submit" class="edit-shipping hide-class" value="Submit"/>
+										</form>
 									</td>
 							</table>
 							
