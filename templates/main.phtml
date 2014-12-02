@@ -1,6 +1,16 @@
 <?php
+	global $db;
+
 //Generate the absolute URL to the assets
 	$URL = dirname($_SERVER['SCRIPT_NAME']) . "/";
+	
+//Get the currently logged in user
+	$result = $db->query("SELECT * FROM tbl_users WHERE usr_UName = '" . $_SESSION['uname'] . "'");
+	$usr = $result->fetch_assoc();
+	
+//How many items are in the cart?
+	$result = $db->query("SELECT SUM(ct_Quantity) AS Total FROM tbl_cart LEFT JOIN tbl_users ON tbl_cart.usr_ID = tbl_users.usr_ID WHERE tbl_users.usr_UName = '" . $_SESSION['uname'] . "'");
+	$ct = $result->fetch_assoc();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -23,7 +33,7 @@
 <?php echo "<script src='" . $URL . "scripts/{$page}.js'></script>" ?>
 
 </head>
-<body class="electric">
+<body class="<?php echo $usr['usr_Theme']; ?>">
 <header id="main-header">
 <nav class="navbar navbar-default" role="navigation">
 <a class="navbar-brand" href="index.php"><img alt="MerchanCS Logo" class="logo" src="images/logo.jpg"></a>
@@ -36,10 +46,10 @@
 <li class="dropdown themes">
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="background-inherit demo-disk"></span></a>
 <ul class="dropdown-menu" role="menu">
-<li><a data-class="apple" href="#"><span class="apple-instance demo-disk"></span> Apple</a></li>
-<li><a class="active" data-class="electric" href="#"><span class="electric-instance demo-disk"></span> Electric</a></li>
-<li><a data-class="lime" href="#"><span class="lime-instance demo-disk"></span> Lime</a></li>
-<li><a data-class="oak" href="#"><span class="oak-instance demo-disk"></span> Oak</a></li>
+<li><a<?php if($usr['usr_Theme'] == "apple") echo " class=\"active\""; ?> data-class="apple" href="#"><span class="apple-instance demo-disk"></span> Apple</a></li>
+<li><a<?php if($usr['usr_Theme'] == "electric") echo " class=\"active\""; ?> data-class="electric" href="#"><span class="electric-instance demo-disk"></span> Electric</a></li>
+<li><a<?php if($usr['usr_Theme'] == "lime") echo " class=\"active\""; ?> data-class="lime" href="#"><span class="lime-instance demo-disk"></span> Lime</a></li>
+<li><a<?php if($usr['usr_Theme'] == "oak") echo " class=\"active\""; ?> data-class="oak" href="#"><span class="oak-instance demo-disk"></span> Oak</a></li>
 </ul>
 </li>
 </ul>
@@ -53,21 +63,21 @@
 	
 <ul class="personal">
 <li class="account dropdown">
-<a href="#" class="dropdown-toggle" data-toggle="dropdown">Walter J. Evancost</a>
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><?php echo $usr['usr_Name']; ?></a>
 
 <ul class="dropdown-menu dropdown-menu-right" role="menu">
 <li>
 <div>
-<h2 class="background-inherit">W</h2>
-<h3>Walter J. Evancost</h3>
-<p>cdboatright@gcc.edu</p>
+<h2 class="background-inherit"><?php echo substr($usr['usr_Name'], 0, 1); ?></h2>
+<h3><?php echo $usr['usr_Name']; ?></h3>
+<p><?php echo $usr['usr_Email']; ?></p>
 <a href="index.php?action=logout" class="btn btn-default" role="button">Logout</a>
 </div>
 </li>
 </ul>
 </li>
 
-<li class="cart"><a href="index.php?page=cart"><i class="fa fa-shopping-cart"><span class="background-inherit badge pull-right" id="cart-count">1</span></i></a></li>
+<li class="cart"><a href="index.php?page=cart"><i class="fa fa-shopping-cart"><span class="background-inherit badge pull-right" id="cart-count"><?php echo $ct['Total']; ?></span></i></a></li>
 </ul>
 </nav>
 </header>

@@ -21,6 +21,21 @@ $(function() {
 		body.removeAttr('data-old-class');
 		$(this).parents('li').find('a.active').removeAttr('class');
 		$(this).addClass('active');
+		
+	//Send the signal to the server	
+		var URL = window.location.pathname;
+		var parts = URL.split("/");
+		var filtered = "";
+		
+		for(var i = 0; i < parts.length - 1; ++i) {
+			if (parts[i] != "")
+				filtered += "/" + parts[i];
+		}
+	
+		$.ajax({
+			data : { theme : $(this).attr('data-class') },
+			url : filtered + "/system/theme.php"
+		});
 	});
 	
 //Open the categories menu

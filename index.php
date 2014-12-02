@@ -1,5 +1,6 @@
 <?php //MVC design inspired by http://www.sitepoint.com/the-mvc-pattern-and-php-2/
 	
+	require_once("DB.php");
 	include_once("ChromePHP.php");
 	//Allows for error logging in the javascript console in Chrome
 	//Use: chromephp::log(OUTPUT)
@@ -17,6 +18,8 @@
 		'admin'
 		);
 $_SESSION['authenticated'] = true;
+$_SESSION['uname'] = "sudo";
+$_SESSION['role'] = "administrator";
 	if (@!$_SESSION['authenticated']) $page = 'login';	
 	else if (isset($_GET['page'])) $page = $_GET['page'];
 	else $page = 'category';	

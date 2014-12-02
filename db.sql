@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.1.12
+-- version 4.2.7.1
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 02, 2014 at 03:32 AM
--- Server version: 5.6.16
--- PHP Version: 5.5.11
+-- Generation Time: Dec 02, 2014 at 08:22 PM
+-- Server version: 5.6.20
+-- PHP Version: 5.5.15
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,14 +17,33 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `tbl_cart`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_cart` (
+  `usr_ID` int(11) NOT NULL,
+  `pr_ID` int(11) NOT NULL,
+  `ct_Quantity` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_cart`
+--
+
+INSERT INTO `tbl_cart` (`usr_ID`, `pr_ID`, `ct_Quantity`) VALUES
+(1, 1, 4),
+(1, 2, 7);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `tbl_categories`
 --
 
 CREATE TABLE IF NOT EXISTS `tbl_categories` (
-  `cat_ID` int(11) NOT NULL AUTO_INCREMENT,
+`cat_ID` int(11) NOT NULL,
   `cat_Name` varchar(255) NOT NULL,
-  `cat_Description` varchar(1024) NOT NULL,
-  PRIMARY KEY (`cat_ID`)
+  `cat_Description` varchar(1024) NOT NULL
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
 
 --
@@ -45,14 +64,12 @@ INSERT INTO `tbl_categories` (`cat_ID`, `cat_Name`, `cat_Description`) VALUES
 --
 
 CREATE TABLE IF NOT EXISTS `tbl_products` (
-  `pr_ID` int(11) NOT NULL AUTO_INCREMENT,
+`pr_ID` int(11) NOT NULL,
   `pr_Name` varchar(1024) NOT NULL,
   `pr_Description` longtext NOT NULL,
   `pr_Price` decimal(10,2) NOT NULL,
   `pr_Image` varchar(1024) NOT NULL,
-  `cat_ID` int(11) NOT NULL,
-  PRIMARY KEY (`pr_ID`),
-  KEY `products_reference_categories` (`cat_ID`)
+  `cat_ID` int(11) NOT NULL
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=16 ;
 
 --
@@ -83,14 +100,13 @@ INSERT INTO `tbl_products` (`pr_ID`, `pr_Name`, `pr_Description`, `pr_Price`, `p
 --
 
 CREATE TABLE IF NOT EXISTS `tbl_users` (
-  `usr_ID` int(11) NOT NULL AUTO_INCREMENT,
+`usr_ID` int(11) NOT NULL,
   `usr_Name` varchar(512) NOT NULL,
   `usr_UName` varchar(64) NOT NULL,
+  `usr_Email` varchar(256) NOT NULL,
   `usr_Pass` char(32) NOT NULL,
   `usr_Role` enum('administrator','user') NOT NULL,
-  `usr_Theme` enum('apple','electric','lime','oak') NOT NULL,
-  PRIMARY KEY (`usr_ID`),
-  UNIQUE KEY `usr_UName` (`usr_UName`)
+  `usr_Theme` enum('apple','electric','lime','oak') NOT NULL
 ) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
 
 --
@@ -99,10 +115,51 @@ CREATE TABLE IF NOT EXISTS `tbl_users` (
 -- User passwords are both "root", as hashed by MD5()
 --
 
-INSERT INTO `tbl_users` (`usr_ID`, `usr_Name`, `usr_UName`, `usr_Pass`, `usr_Role`, `usr_Theme`) VALUES
-(1, 'Super User', 'sudo', '63a9f0ea7bb98050796b649e85481845', 'administrator', 'electric'),
-(2, 'Walter J. Evancost', 'wallst.', '63a9f0ea7bb98050796b649e85481845', 'user', 'lime');
+INSERT INTO `tbl_users` (`usr_ID`, `usr_Name`, `usr_UName`, `usr_Email`, `usr_Pass`, `usr_Role`, `usr_Theme`) VALUES
+(1, 'Super User', 'sudo', 'cdboatright@gcc.edu', '63a9f0ea7bb98050796b649e85481845', 'administrator', 'electric'),
+(2, 'Walter J. Evancost', 'wallst.', 'cdboatright@gcc.edu', '63a9f0ea7bb98050796b649e85481845', 'user', 'lime');
 
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `tbl_categories`
+--
+ALTER TABLE `tbl_categories`
+ ADD PRIMARY KEY (`cat_ID`);
+
+--
+-- Indexes for table `tbl_products`
+--
+ALTER TABLE `tbl_products`
+ ADD PRIMARY KEY (`pr_ID`), ADD KEY `products_reference_categories` (`cat_ID`);
+
+--
+-- Indexes for table `tbl_users`
+--
+ALTER TABLE `tbl_users`
+ ADD PRIMARY KEY (`usr_ID`), ADD UNIQUE KEY `usr_UName` (`usr_UName`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `tbl_categories`
+--
+ALTER TABLE `tbl_categories`
+MODIFY `cat_ID` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
+--
+-- AUTO_INCREMENT for table `tbl_products`
+--
+ALTER TABLE `tbl_products`
+MODIFY `pr_ID` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=16;
+--
+-- AUTO_INCREMENT for table `tbl_users`
+--
+ALTER TABLE `tbl_users`
+MODIFY `usr_ID` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 --
 -- Constraints for dumped tables
 --
@@ -111,4 +168,4 @@ INSERT INTO `tbl_users` (`usr_ID`, `usr_Name`, `usr_UName`, `usr_Pass`, `usr_Rol
 -- Constraints for table `tbl_products`
 --
 ALTER TABLE `tbl_products`
-  ADD CONSTRAINT `tbl_products_ibfk_1` FOREIGN KEY (`cat_ID`) REFERENCES `tbl_categories` (`cat_ID`) ON DELETE CASCADE ON UPDATE CASCADE;
+ADD CONSTRAINT `tbl_products_ibfk_1` FOREIGN KEY (`cat_ID`) REFERENCES `tbl_categories` (`cat_ID`) ON DELETE CASCADE ON UPDATE CASCADE;
