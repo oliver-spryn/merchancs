@@ -1,4 +1,10 @@
 <?php
+	if(isset($_POST['clear'])) {
+		$this->clearCart();
+	}
+	else if(isset($_POST['removeItem'])) {
+		$this->removeItem($_POST['removeItem']);
+	}
 	$this->fetchCartData();
 ?>
 <div id="page-content-wrapper">
@@ -34,7 +40,10 @@
 												<td class="cart-image">
 													<div class="col-sm-3">
 														<img class="image-responsive thumbnail" src="'.$i->image.'" alt="'.$i->name.'" >
-														<a href="#" class="delete-item">Delete</a>
+														<form action="" method="POST">
+															<input type="textbox" name="removeItem" value="'.$i->id.'" style="display: none"/>
+															<input type="submit" class="delete-item" value="Delete"/>
+														</form>
 													</div>
 												</td>
 												<td class="cart-info">
@@ -46,7 +55,7 @@
 												</td>
 												<td class="cart-quantity">
 													<span>+</span>
-													<input class="quantity-box" type="text" value="1" maxlength="6" />
+													<input class="quantity-box" type="text" value="'.$i->num.'" maxlength="6" />
 													<span>=</span>									</td>
 												<td class="cart-subtotal">
 													<span class="item-subtotal"></span>
@@ -107,8 +116,11 @@
 								<h3><b>Total: <span id="total-value">$X.XX</span></b></h3>
 								<input type="button" id="checkout-button" value="Proceed to Checkout" />
 							</div>
-							
-							<a href="#" id="clear-cart">Clear Cart</a>
+							<form action="" method="POST">
+								<input type="textbox" name="clear" value="clear" style="display: none"/>
+								<input type="submit" value="Clear Cart"/>
+							<!--<a href="#" id="clear-cart">Clear Cart</a>-->
+							</form>
 						</div>
 					</div>
 				</div>

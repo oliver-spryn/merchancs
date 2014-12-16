@@ -37,7 +37,6 @@ window.onload = function() {
 			e.preventDefault();
 			return;
 		}
-		alert("Postback to server for data update");
 		emailBox.innerHTML = emailEditBox.value;
 		var editEmail = document.getElementsByClassName('edit-email');
 		var emailData = document.getElementsByClassName('email-data');
@@ -77,7 +76,6 @@ window.onload = function() {
 			return;
 		}
 		
-		alert("postback to server to check password validity");
 		
 		for(var i = 0; i< currentPassword.length; i++) {
 			removeClass(currentPassword[i], 'hide-class');
@@ -98,9 +96,9 @@ window.onload = function() {
 		var payEditBox2 = payEdit[1];
 		var payEditBox3 = payEdit[2];
 		
-		payEditBox1.value = payCurrent[0];
-		payEditBox2.value = payCurrent[1];
-		payEditBox3.value = payCurrent[2];
+		// payEditBox1.value = payCurrent[0];
+		// payEditBox2.value = payCurrent[1];
+		// payEditBox3.value = payCurrent[2];
 		
 		for(var i = 0; i < payData.length; i++) {
 			addClass(payData[i], 'hide-class');
@@ -116,17 +114,16 @@ window.onload = function() {
 		var payCurrent = payData[0].innerHTML.split("<br>");
 		
 		var payEdit = document.getElementsByClassName('edit-payment');
-		var payEditBox1 = payEdit[0];
-		var payEditBox2 = payEdit[1];
-		var payEditBox3 = payEdit[2];
+		// var payEditBox1 = payEdit[0];
+		// var payEditBox2 = payEdit[1];
+		// var payEditBox3 = payEdit[2];
 		
 		if(payEditBox1.value == "" || payEditBox2.value == "" || payEditBox3.value == "") {
 			alert("Please enter valid payment information");
 			e.preventDefault();
 			return;
 		}
-		alert("Postback to server for data update");
-		payData[0].innerHTML = payEditBox1.value + "<br>" + payEditBox2.value + "<br>" + payEditBox3.value;
+		//payData[0].innerHTML = payEditBox1.value + "<br>" + payEditBox2.value + "<br>" + payEditBox3.value;
 
 		for(var i = 0; i < payData.length; i++) {
 			removeClass(payData[i], 'hide-class');
@@ -144,11 +141,11 @@ window.onload = function() {
 		
 		
 		var shipEdit = document.getElementsByClassName('edit-shipping');
-		var shipEditBox1 = shipEdit[0];
-		var shipEditBox2 = shipEdit[1];
+		// var shipEditBox1 = shipEdit[0];
+		// var shipEditBox2 = shipEdit[1];
 		
-		shipEditBox1.value = shipCurrent[0];
-		shipEditBox2.value = shipCurrent[1];
+		// shipEditBox1.value = shipCurrent[0];
+		// shipEditBox2.value = shipCurrent[1];
 		
 		for(var i = 0;i < shipData.length; i++) {
 			addClass(shipData[i],'hide-class');
@@ -166,14 +163,14 @@ window.onload = function() {
 		var shipEdit = document.getElementsByClassName('edit-shipping');
 		var shipEditBox1 = shipEdit[0];
 		var shipEditBox2 = shipEdit[1];
+		var shipEditBox3 = shipEdit[2];
 		
-		if(shipEditBox1.value == "" || shipEditBox2.value == "") {
+		if(shipEditBox1.value == "" || shipEditBox2.value == "" || shipEditBox3.value == "") {
 			alert("Please enter a valid shipping address");
 			e.preventDefault();
 			return;
 		}
-		alert("Postback to server for data update");
-		shipData[0].innerHTML = shipEditBox1.value + "<br>" + shipEditBox2.value;
+		//shipData[0].innerHTML = shipEditBox1.value + "<br>" + shipEditBox2.value;
 		
 		for(var i = 0; i< shipData.length; i++) {
 			removeClass(shipData[i], 'hide-class');
