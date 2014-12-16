@@ -1,6 +1,6 @@
 <?php
 	global $db;
-
+	
 //Generate the absolute URL to the assets
 	$URL = dirname($_SERVER['SCRIPT_NAME']) . "/";
 	
@@ -55,10 +55,13 @@
 </ul>
 
 <div class="input-group search">
-<input class="form-control" type="text" placeholder="Search">
+<form action="index.php?page=search">
+<input type="hidden" name="page" value="search" />
+<input class="form-control" type="text" name="q" autocomplete="off" placeholder="Search"<?php if(isset($_GET['page']) && $_GET['page'] == "search") echo " value=\"" . htmlentities($_GET['q']) . "\""; ?>>
 <span class="input-group-btn">
-<button class="btn btn-default" type="button">Go</button>
+<input type="submit" value="Go" class="btn btn-default" />
 </span>
+</form>
 </div>
 	
 <ul class="personal">
@@ -68,8 +71,8 @@
 <ul class="dropdown-menu dropdown-menu-right" role="menu">
 <li>
 <div>
-<h2 class="background-inherit"><?php echo substr($usr['usr_Name'], 0, 1); ?></h2>
-<h3><?php echo $usr['usr_Name']; ?></h3>
+<h2 class="background-inherit" onClick="window.location.href='index.php?page=account'"><?php echo substr($usr['usr_Name'], 0, 1); ?></h2>
+<h3 onClick="window.location.href='index.php?page=account'"><?php echo $usr['usr_Name']; ?></h3>
 <p><?php echo $usr['usr_Email']; ?></p>
 <a href="index.php?action=logout" class="btn btn-default" role="button">Logout</a>
 </div>

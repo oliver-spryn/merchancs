@@ -219,16 +219,17 @@ header#main-header div.search {
 	width: 600px;
 }
 
-header#main-header div.search input {
+header#main-header div.search input[type=text] {
 	background-color: transparent;
 	border: 1px solid #FFF;
 	border-radius: 0px;
 	color: #FFF;
 	height: 45px;
 	padding: 15px;
+	width: 90%;
 }
 
-header#main-header div.search span.input-group-btn button {
+header#main-header div.search span.input-group-btn input[type=submit] {
 	background: transparent;
 	border: 1px solid #FFF;
 	border-radius: 0px;
@@ -285,6 +286,7 @@ header#main-header ul.personal li.account ul li div {
 
 header#main-header ul.personal li.account ul li div h2 {
 	border: 3px solid #FFFFFF;
+	cursor: pointer;
 	display: table-cell;
 	font-size: 48px;
 	height: 96px;
@@ -294,6 +296,7 @@ header#main-header ul.personal li.account ul li div h2 {
 }
 
 header#main-header ul.personal li.account ul li div h3 {
+	cursor: pointer;
 	display: inline-block;
 	font-size: 18px;
 	left: 105px;

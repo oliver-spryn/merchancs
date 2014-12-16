@@ -1,3 +1,7 @@
+<?php
+	$this->fetch();
+?>
+
 <div id="page-content-wrapper">
 	<div class="container">
 		<div class="row">
@@ -5,20 +9,17 @@
 				<h2>Search Results</h2>
 				
 				<ul class="search">
-					<li>
-						<a href="#">
-							<img alt="Floppy" src="images/floppy-disks.jpg"/>
-							<h3>Dr. Boatright's Floppy Disk Trove</h3>
-							<p>$0.01</p>
+                <?php
+					foreach($this->items as $item) {
+						echo "<li>
+						<a href=\"index.php?page=product&id=" . $item->ID . "\">
+							<img alt=\"Floppy\" src=\"images/" . $item->image . "\"/>
+							<h3>" . $item->name . "</h3>
+							<p>$" . $item->price . "</p>
 						</a>
-					</li>
-					<li>
-						<a href="#">
-							<img alt="Floppy" src="images/floppy-disks.jpg"/>
-							<h3>Dr. Yeagers's Floppy Disk Trove</h3>
-							<p>$0.01</p>
-						</a>
-					</li>
+					</li>";	
+					}
+				?>
 				</ul>
 			</div>
 		</div>

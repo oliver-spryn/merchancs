@@ -1,0 +1,32 @@
+<?php
+	$this->fetch();
+	if(!isset($_SESSION['role']) || (isset($_SESSION['role']) && $_SESSION['role'] != "administrator")) {
+		header("Location: index.php");
+		exit;
+	}
+	
+	if(isset($_GET['delete'])) {
+		$stmt = $db->prepare("DELETE FROM `tbl_users` WHERE `usr_ID` = ?");
+		$stmt->bind_param("i", $_GET['delete']);
+		$stmt->execute();
+		
+		header("Location: index.php?page=users");
+		exit;
+	}
+?>
+
+<div id="page-content-wrapper">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				<h2>Users</h2>
+				
+               	<?php
+					foreach($this->items as $item) {
+						echo "<div class=\"row\"><h4>" . $item->name . "</h4><a href=\"index.php?page=users&delete=" . $item->ID . "\">Delete</a></div>";	
+					}
+				?>
+			</div>
+		</div>
+	</div>
+</div>

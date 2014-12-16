@@ -1,9 +1,17 @@
+<?php
+	$this->auth();
+	
+	if(isset($_SESSION['authenticated']) && $_SESSION['authenticated'] = true) {
+		header("Location: index.php");
+		exit;
+	}
+?>
+
 <body class="electric">
 <header id="main-header">
-    <a id="logo" class="navbar-brand" href="#"><img alt="MerchanCS Logo" class="logo" src="images/logo.jpg"></a>
+    <a id="logo" class="navbar-brand" href="index.php"><img alt="MerchanCS Logo" class="logo" src="images/logo.jpg"></a>
 </header>
-<form  name="loginForm" action="index.php" onsubmit="return validateForm()" method="">
-<input name = "action" type="hidden" value="login">
+<form  name="loginForm" action="index.php?page=login" onSubmit="return validateForm()" method="post">
 <h2>Login: </h2>
 
 
@@ -26,7 +34,7 @@
 -->
 	
 <div class="input-group username">
-<input name="username" class="form-control" type="text" placeholder="Username">
+<input name="username" autocomplete="off" class="form-control" type="text" placeholder="Username">
 </div>
     
 <div class="input-group password">
@@ -38,6 +46,4 @@
 
 <!--<button id = "submitButton" class="btn btn-default" type="button" onclick="window.location = 'login2.html';">Submit</button>-->
     
-    
-<a class="text-inherit" href="#">Forgot Password?</a>
 </form>

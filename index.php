@@ -15,11 +15,10 @@
 		'search',
 		'cart',
 		'account',
-		'admin'
+		'admin',
+		'users'
 		);
-$_SESSION['authenticated'] = true;
-$_SESSION['uname'] = "sudo";
-$_SESSION['role'] = "administrator";
+
 	if (@!$_SESSION['authenticated']) $page = 'login';	
 	else if (isset($_GET['page'])) $page = $_GET['page'];
 	else $page = 'category';	
