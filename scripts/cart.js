@@ -8,26 +8,11 @@ window.onload = function() {
 	
 	var deleteControls = document.getElementsByClassName('delete-item');
 	
-	var clearCartControl = document.getElementById('clear-cart');
 	
 	var checkoutControl = document.getElementById('checkout-button');
 	
-	//Remove item from cart
-	for(var i = 0;i < deleteControls.length; i++) {
-		deleteControls[i].onclick = function() {
-		
-		};
-	}
 	
-	//Clear cart
-	clearCartControl.onclick = function() {
 	
-	};
-	
-	//Checkout
-	checkoutControl.onclick = function() {
-	
-	};
 	
 	//Subtotal/Total checking
 	for(var i = 0;i < inputs.length; i++) {
