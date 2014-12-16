@@ -1,4 +1,23 @@
 <?php
+	if(isset($_POST['newEmail'])) {
+		$this->changeEmail($_POST['newEmail']);
+	}
+	else if(isset($_POST['oldPassword']) && isset($_POST['newPassword'])) {
+		if($_POST['newPassword'] == $_POST['confirmNew']) {
+			$this->changePassword($_POST['oldPassword'],$_POST['newPassword']);
+		}
+		else {
+			echo "Passwords do not match";
+		}
+	}
+	else if(isset($_POST['payment1'])&&isset($_POST['payment2'])&&isset($_POST['payment3'])) {
+		$newPayment = $_POST['payment1'] . "|" . $_POST['payment2'] . "|" . $_POST['payment3'];
+		$this->changePayment($newPayment);
+	}
+	else if(isset($_POST['shipping1'])&&isset($_POST['shipping2'])&&isset($_POST['shipping3'])) {
+		$newShipping = $_POST['shipping1'] . "|" . $_POST['shipping2'] . "|" . $_POST['shipping3'];
+		$this->changeShipping($newShipping);
+	}
 	$this->fetchAccountInfo();
 ?>
 <div id="page-content-wrapper">
@@ -22,21 +41,23 @@
 									<td class="change-column"></td>
 								</tr>
 								<tr>
+									<form action="" method="post">
 									<td class="topic-column">
 										<span><b>Email:</b></span>
 									</td>
 									<td class="data-column">
 										<span class='email-data'><?php echo $this->email; ?></span>
-										<input type="textbox" class="edit-email hide-class" value="user123@gcc.edu"/>
+										<input type="textbox" name="newEmail" class="edit-email hide-class" value="<?php echo $this->email; ?>"/>
 									</td>
 									<td class="change-column">
 										<input type="button" id="email-change" class="email-data" value="Change" />
-										<form action="http://localhost/project/merchancs/index.php?page=account">
+										
 											<input type="submit" id="email-submit" class="edit-email hide-class" value="Submit" />
-										</form>
 									</td>
+									</form>
 								</tr>
 								<tr>
+									<form action="" method='post'>
 									<td class="topic-column">
 										<span class="password-data"><b>Password:</b></span>
 										<span class="edit-password hide-class"><b>New Password:<br> </b></span>
@@ -44,50 +65,71 @@
 										<span class="edit-password hide-class"><b>Current Pwd:</b></span>
 									</td>
 									<td class="data-column">
-										<span class="password-data"><?php echo $this->password; ?></span>
-										<input type="textbox" id="new-password" class="edit-password hide-class" value=""/>
-										<input type="textbox" id="confirm-password" class="edit-password hide-class" value=""/>
-										<input type="textbox" id="current-password" class="edit-password hide-class" value=""/>
+										<span class="password-data">********</span>
+										<input type="textbox" name="newPassword" id="new-password" class="edit-password hide-class" value=""/>
+										<input type="textbox" name="confirmNew" id="confirm-password" class="edit-password hide-class" value=""/>
+										<input type="textbox" name="oldPassword" id="current-password" class="edit-password hide-class" value=""/>
 									</td>
 									<td class="change-column">
 										<input id="password-change" class='password-data' type="button" value="Change"/>
-										<form action="http://localhost/project/merchancs/index.php?page=account">
+										
 											<input type="submit" id="password-submit" class="edit-password hide-class" value="Submit"/>
-										</form>
 									</td>
+									</form>
 								</tr>
 								<tr>
+								
+									<form action="" method="post">
 									<td class="topic-column">
 										<span><b>Payment Info:</b></span>
 									</td>
 									<td class="data-column">
-										<span class="payment-data"><?php echo $this->payment; ?></span>
-										<input class="edit-payment hide-class" type="textbox" value=""/>
-										<input class="edit-payment hide-class" type="textbox" value=""/>
-										<input class="edit-payment hide-class" type="textbox" value=""/>
+										<span class="payment-data">
+											<?php 
+												$paymentArray = explode("|", $this->payment);
+												foreach($paymentArray as $p) {
+													echo $p;
+													echo "<br/>";
+												}
+											?>
+										</span>
+										<input class="edit-payment hide-class" name="payment1" type="textbox" value="<?php echo trim($paymentArray[0],"\t");?>"/>
+										<input class="edit-payment hide-class" name="payment2" type="textbox" value="<?php echo trim($paymentArray[1]);?>"/>
+										<input class="edit-payment hide-class" name="payment3" type="textbox" value="<?php echo trim($paymentArray[2]);?>"/>
 									</td>
 									<td class="change-column">
 										<input id="payment-change" type="button" class="payment-data" value="Change"/>
-										<form action="http://localhost/project/merchancs/index.php?page=account">
 											<input type="submit" id="payment-submit" class="edit-payment hide-class" value="submit"/>
-										</form>
+										
 									</td>
+									</form>
 								</tr>
 								<tr>
+									<form action="" method="post">
 									<td class="topic-column">
 										<span><b>Shipping Address:</b></span>
 									</td>
 									<td class="data-column">
-										<span class="shipping-data"><?php echo $this->shipping; ?></span>
-										<input type="textbox" class="edit-shipping hide-class" value=""/>
-										<input type="textbox" class="edit-shipping hide-class" value=""/>
+										<span class="shipping-data">
+											<?php 
+												$shippingArray = explode("|", $this->shipping);
+												foreach($shippingArray as $s) {
+													echo $s;
+													echo "<br/>";
+												}
+											?>
+										</span>
+										<input type="textbox" name="shipping1" class="edit-shipping hide-class" value="<?php echo $shippingArray[0];?>"/>
+										<input type="textbox" name="shipping2" class="edit-shipping hide-class" value="<?php echo $shippingArray[1];?>"/>
+										<input type="textbox" name="shipping3" class="edit-shipping hide-class" value="<?php echo $shippingArray[2];?>"/>
 									</td>
 									<td class="change-column">
 										<input type="button" id="shipping-change" class='shipping-data' value="Change"/>
-										<form action="http://localhost/project/merchancs/index.php?page=account">
 											<input type="submit" id="shipping-submit" class="edit-shipping hide-class" value="Submit"/>
-										</form>
+										
 									</td>
+									</form>
+								</tr>
 							</table>
 							
 						</div>
