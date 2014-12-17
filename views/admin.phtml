@@ -1,3 +1,24 @@
+<?php
+	$this->fetchAdminData();
+
+
+    $host = 'localhost';
+    $database = 'merchancs';
+    $dbuser = 'root';
+    $dbpass = '';
+
+    $db = new MySQLi($host, $dbuser, trim($dbpass), $database);
+
+    $allProducts = $db->query("SELECT * FROM `tbl_products`");
+    $sizeOfTable = $allProducts->num_rows;
+    $newSizeOfTable = $sizeOfTable + 1;
+
+    if(isset($_POST['newItemText']) && isset($_POST['itemDescriptionText']) && isset($_POST['itemPriceText']) && isset($_POST['itemImage']) && isset($_POST['itemCategoryText']))
+    {
+        $db->query("INSERT INTO `tbl_products` (`pr_ID`, `pr_Name`, `pr_Description`, `pr_Price`, `pr_Image`, `cat_ID`)     VALUES (".$newSizeOfTable.", ".$_POST['newItemText'].", ".$_POST['itemDescriptionText'].", ".$_POST['itemPriceText'].", ".$_POST['itemImage'].", ".$_POST['itemCategoryText']."");
+    }
+?>
+
 <h2>MerchanCS - Administration</h2>
 	
     
@@ -10,17 +31,36 @@
 </span>
 </div>-->
 	
+<?php
 
+?>
 </nav>
 </header>
 
 <section id="editAside">
-	
+
 <nav>
 
-<form name="addItemForm" action="" onsubmit="return validateForm()" method="">
-<input type="text" name="newItemText" placeholder="+ Add New Item">
+<form name="addItemForm" action="" onsubmit="return validateForm()" method="POST">
+<br>
+<input type="text" name="newItemText" placeholder="New Item Title">
+</br>
+<br>
+<textarea rows="4" cols="50" name="itemDescriptionText" placeholder="Item Description">
+    </textarea>
+</br>
+<br>
+<input type="text" name="itemPriceText" placeholder="Item Price">
+</br>
+<br> 
+Item Image <input type="file" name="itemImage" placeholder="Item Image">
+</br>
+<br>
+<input type="text" name="itemCategoryText" placeholder="Item Category">
+</br>
+<br>
 <input type="submit" name="newItemButton"  value="Submit">
+</br>
 </form>    
     <div class="CSSTableGenerator" >
                 <table >
@@ -30,41 +70,23 @@
                         </td>
                         
                     </tr>
-                    <tr>
-                        <td >
+                    <?php
+                       foreach($this->adminItems as $i) 
+                       {
+                           echo '<tr>';
+                           echo '<td >';
                             
-                            <li><a class="text" href="#">Edit/Delete</a></li>
-                            <h2> Floppy disks </h2>
-                            <p> Price: $X.XX </p>
-                        </td>
+                                echo '<li><a class="text" href="#">Edit/Delete</a></li>';
+                                echo '<h2> ' . $i->name . '</h2>';
+                                echo '<p> Price: ' . $i->price . ' </p>';
+                                echo '<p> Category: ' . $i->category . ' </p>';
+                                echo '<p> Description: ' . $i->description . ' </p>';
+                           echo '</td>';
+                           echo '</tr>';
+                        }
                         
-                    </tr>
-                    <tr>
-                        <td >
-                            
-                            <li><a class="text" href="#">Edit/Delete</a></li>
-                            <h2> Bananas </h2>
-                            <p> Price: $X.XX </p>
-                        </td>
                         
-                    </tr>
-                    <tr>
-                        <td >
-                            
-                            <li><a class="text" href="#">Edit/Delete</a></li>
-                            <h2> Wooden Brick </h2>
-                            <p> Price: $X.XX </p>
-                        </td>
-                        
-                    </tr>
-                    <tr>
-                        <td >
-                            
-                            <li><a class="text" href="#">Edit/Delete</a></li>
-                            <h2> Sunscreen </h2>
-                            <p> Price: $X.XX </p>
-                        </td>
-                        
-                    </tr>
+//$db->query("UPDATE `merchancs`.`tbl_products` SET `pr_Name` = '4.93' WHERE `tbl_products`.`pr_ID` = 2");
+                    ?> 
                 </table>
             </div>

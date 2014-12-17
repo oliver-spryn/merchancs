@@ -246,7 +246,7 @@ section{
     padding-right: 5%;
 }
 input[name="newItemText"]{
-   width:600px;
+   width:350px;
 }
 input[name="newItemButton"]{
     width:150px;
