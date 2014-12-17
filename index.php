@@ -21,8 +21,8 @@
 
 	if (@!$_SESSION['authenticated']) $page = 'login';	
 	else if (isset($_GET['page'])) $page = $_GET['page'];
-	else $page = 'category';	
-			
+	else $page = 'category';		
+	
 	foreach($pages as $p)
 	{
 		if ($page == $p)

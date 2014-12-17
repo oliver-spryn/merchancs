@@ -53,10 +53,11 @@ class CategoryView extends View
 			$name = $item['pr_Name']; 
 			$img = $item['pr_Image']; 
 			$price = '$'.$item['pr_Price'];	
+			$id = $item["pr_ID"];
 			
 			$ret .= "						
 				<div class='col-sm-3'>
-					<a href='index.php?page=product'>
+					<a href='index.php?page=product&id=$id'>
 						<img alt='$name'
 							class='img-responsive thumbnail' 
 							src='$URL/images/$img'/>

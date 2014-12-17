@@ -51,7 +51,7 @@ class LoginView extends View
 		if(isset($_POST['username']) && isset($_POST['password'])) {
 			$auth = Login::Auth($_POST['username'], $_POST['password']);
 			
-			if($auth) {
+			if($auth->ID) {
 				$_SESSION['authenticated'] = true;
 				$_SESSION['uname'] = $auth->uname;
 				$_SESSION['role'] = $auth->role;
@@ -77,10 +77,10 @@ class LoginController extends Controller
 {
 	public function login()
 	{
-		$_SESSION['authenticated'] = true;
+		//$_SESSION['authenticated'] = true;
 		
 		//redirect
-		header( 'Location: index.php');
+		//header( 'Location: index.php');
 	}
 	
 	public function forgotPassword()
