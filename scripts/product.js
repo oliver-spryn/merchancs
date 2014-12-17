@@ -21,5 +21,6 @@ $(function(){
 		$.ajax({
 			url : filtered + "/system/cart.php"
 		});
+		e.preventDefault();
 	});
 });

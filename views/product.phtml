@@ -1,5 +1,6 @@
 <?php
 	$this->fetch();
+	$_SESSION['viewedID'] = $this->item->ID;
 ?>
 <section class="banner">
 <img alt="floppies" src="images/<?php echo $this->item->image; ?>"/>
